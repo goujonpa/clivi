@@ -1,11 +1,11 @@
 <?php
+
 class Prestation
 {
     private $id;
     private $description;
     private $type;
     private $prix;
-
 
     public function id()
     {
@@ -47,4 +47,3 @@ class Prestation
         $this->prix = $prix;
     }
 }
-?>

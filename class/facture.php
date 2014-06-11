@@ -1,4 +1,5 @@
 <?php
+
 class Facture
 {
     private $id;
@@ -6,7 +7,6 @@ class Facture
     private $date_paiement;
     private $moyen_paiement;
     private $prix_total;
-
 
     public function id()
     {
@@ -58,4 +58,3 @@ class Facture
         $this->prix_total = $prix_total;
     }
 }
-?>

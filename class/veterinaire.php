@@ -1,4 +1,5 @@
 <?php
+
 class Veterinaire extends Employe
 {
     private $idNational;
@@ -13,4 +14,3 @@ class Veterinaire extends Employe
         $this->idNational = $idNational;
     }
 }
-?>

@@ -1,4 +1,5 @@
 <?php
+
 class Race
 {
     private $nom;
@@ -24,4 +25,3 @@ class Race
         $this->prix_intervention = $prix_intervention;
     }
 }
-?>

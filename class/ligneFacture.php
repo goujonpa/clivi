@@ -1,10 +1,10 @@
 <?php
-class Ligne_facture
+
+class LigneFacture
 {
     private $num;
     private $quantite;
     private $remise;
-
 
     public function num()
     {
@@ -35,4 +35,3 @@ class Ligne_facture
     {
         $this->remise = $remise;
     }
-?>

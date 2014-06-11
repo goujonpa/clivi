@@ -1,4 +1,5 @@
 <?php
+
 class Espece
 {
     private $nom;
@@ -14,14 +15,13 @@ class Espece
         $this->nom = $nom;
     }
 
-    public function prix_consult()
+    public function prixConsult()
     {
-        return $this->prix_consult;
+        return $this->prixConsult;
     }
     
-    public function setPrix_consult($prix_consult)
+    public function setPrixConsult($prixConsult)
     {
-        $this->prix_consult = $prix_consult;
+        $this->prixConsult = $prixConsult;
     }
 }
-?>
