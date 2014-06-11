@@ -1,4 +1,5 @@
 <?php
+
 class Animal
 {
     private $nom;
@@ -9,7 +10,6 @@ class Animal
     private $date_deces;
     private $taille;
     private $code;
-
 
     public function nom()
     {
@@ -51,24 +51,24 @@ class Animal
         $this->sterile = $sterile;
     }
 
-    public function date_naissance()
+    public function dateNaissance()
     {
-        return $this->date_naissance;
+        return $this->dateNaissance;
     }
     
-    public function setDate_naissance($date_naissance)
+    public function setDateNaissance($dateNaissance)
     {
-        $this->date_naissance = $date_naissance;
+        $this->dateNaissance = $dateNaissance;
     }
 
-    public function date_deces()
+    public function dateDeces()
     {
-        return $this->date_deces;
+        return $this->dateDeces;
     }
     
-    public function setDate_deces($date_deces)
+    public function setDateDeces($dateDeces)
     {
-        $this->date_deces = $date_deces;
+        $this->dateDeces = $dateDeces;
     }
 
     public function taille()
@@ -91,4 +91,3 @@ class Animal
         $this->code = $code;
     }
 }
-?>

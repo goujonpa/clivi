@@ -1,4 +1,5 @@
 <?php
+
 class Personne
 {
     private $nom;
@@ -24,8 +25,6 @@ class Personne
         $this->prenom = $prenom;
     }
 }
-?>
-
 
 
 

@@ -1,4 +1,5 @@
 <?php
+
 class Employe extends Personne
 {
     private $id;
@@ -13,4 +14,3 @@ class Employe extends Personne
         $this->id = $id;
     }
 }
-?>

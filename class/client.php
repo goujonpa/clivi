@@ -1,4 +1,5 @@
 <?php
+
 class Client extends Personne
 {
     private $numTel;
@@ -13,4 +14,3 @@ class Client extends Personne
         $this->numTel = $numTel;
     }
 }
-?>

@@ -1,10 +1,10 @@
 <?php
+
 class Ordonnance
 {
     private $id;
     private $date_edition;
     private $prix;
-
 
     public function id()
     {
@@ -36,4 +36,3 @@ class Ordonnance
         $this->prix = $prix;
     }
 }
-?>
