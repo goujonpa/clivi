@@ -1,4 +1,8 @@
 <?php
+    function __autoload($class_name) {
+        include strtolower($class_name) . '.php';
+    }
+
     // This file is the main controller
     include 'template/header.php';
 
