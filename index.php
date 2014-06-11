@@ -1,13 +1,15 @@
-<?php include 'template/header.php'; ?>
-<?php include 'template/menu.php'; ?>
+<?php
+    // This file is the main controller
+    include 'template/header.php';
 
-    <!-- Begin page content -->
-    <div class="container">
-      <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
-      </div>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
-      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
-    </div>
+    // TODO: Handle url to detect wich controller to call
 
-<?php include 'template/footer.php'; ?>
+    // Show the menu, the previous part have set wich page we are on to set the "active" class in menu
+    include 'template/menu.php';
+
+    // TODO: Call the correct controller
+    include 'controller/index.php';
+
+    // Show the footer
+    include 'template/footer.php';
+?>
