@@ -1,5 +1,5 @@
-<?php include 'header.php'; ?>
-<?php include 'menu.php'; ?>
+<?php include 'template/header.php'; ?>
+<?php include 'template/menu.php'; ?>
 
     <!-- Begin page content -->
     <div class="container">
@@ -10,4 +10,4 @@
       <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
     </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'template/footer.php'; ?>
