@@ -15,5 +15,4 @@ class Db
         	die('Erreur : ' . $e->getMessage());
 		}
 	}
-
 }
