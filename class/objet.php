@@ -2,12 +2,12 @@
 
 class Objet
 {
-    public function fromDb(Array)
+    public function fromDb($arr)
     {
         $att = get_object_vars($this)
 
         for ($i=0; $i < count($att); $i++) { 
-            $this->$att[i] = Array[i];
+            $this->$att[i] = $arr[i];
         }
     }
 
