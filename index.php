@@ -8,6 +8,7 @@
 
     // Handle url
     $url = explode("/", $_SERVER['PHP_SELF']);
+    $base_url = $url[0] . "/" . $url[1] . "/" $url[2] . "/";
     if(isset($url[3])) { 
         $page = $url[3]; 
     } else { 
