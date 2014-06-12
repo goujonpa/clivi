@@ -16,12 +16,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personne <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Personnel</li>
-                            <li><a href="/personne/listePersonnel">Liste</a></li>
-                            <li><a href="personne/addPersonnel">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/listePersonnel">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/addPersonnel">Ajouter</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Client</li>
-                            <li><a href="index.php/personne/listeClient">Liste</a></li>
-                            <li><a href="/index.php/personne/addClient">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/listeClient">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/addClient">Ajouter</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
