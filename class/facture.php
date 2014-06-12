@@ -3,6 +3,8 @@
 class Facture
 {
     private $id;
+    private $employe;
+    private $animal;
     private $date_edition;
     private $date_paiement;
     private $moyen_paiement;
@@ -16,6 +18,26 @@ class Facture
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    public function employe()
+    {
+        return $this->employe;
+    }
+    
+    public function setEmploye($employe)
+    {
+        $this->employe = $employe;
+    }
+
+    public function animal()
+    {
+        return $this->animal;
+    }
+    
+    public function setAnimal($animal)
+    {
+        $this->animal = $animal;
     }
 
     public function date_edition()

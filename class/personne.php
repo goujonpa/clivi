@@ -2,8 +2,19 @@
 
 class Personne
 {
+    private $id;
     private $nom;
     private $prenom;
+
+    public function id()
+    {
+        return $this->id;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function nom()
     {
