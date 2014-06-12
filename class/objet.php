@@ -15,7 +15,6 @@ class Objet
     {
         $className = get_called_class();
         echo $className;
-        die();
         $dbName = lcfirst($className);
         $bdd = new Db();
         $result = Array();
