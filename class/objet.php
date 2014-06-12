@@ -5,11 +5,10 @@ class Objet
     public function fromDb($arr)
     {
         $att = get_object_vars($this);
-        print_r($att);
+        $attKeys = array_keys($att);
 
         for ($i=0; $i < count($att); $i++) {
-            echo $att[$i] . "<br />";
-            $this->$att[$i] = $arr[$att[$i]];
+            $this->$attKeys[$i] = $arr[$attKeys[$i]];
         }
     }
 
