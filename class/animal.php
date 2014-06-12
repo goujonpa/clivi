@@ -3,6 +3,8 @@
 class Animal
 {
     private $nom;
+    private $proprio;
+    private $race;
     private $poids;
     private $genre;
     private $sterile;
@@ -19,6 +21,26 @@ class Animal
     public function setNom($nom)
     {
         $this->nom = $nom;
+    }
+
+    public function proprio()
+    {
+        return $this->proprio;
+    }
+    
+    public function setProprio($proprio)
+    {
+        $this->proprio = $proprio;
+    }
+
+    public function race()
+    {
+        return $this->race;
+    }
+    
+    public function setRace($race)
+    {
+        $this->race = $race;
     }
 
     public function poids()
