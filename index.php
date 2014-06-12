@@ -1,6 +1,6 @@
 <?php
     function __autoload($class_name) {
-        include strtolower($class_name) . '.php';
+        include 'class/' . strtolower($class_name) . '.php';
     }
 
     // This file is the main controller
