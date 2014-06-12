@@ -8,8 +8,8 @@ class Objet
         print_r($att);
 
         for ($i=0; $i < count($att); $i++) {
-            echo $att[i] . "<br />";
-            $this->$att[i] = $arr[$att[i]];
+            echo $att[$i] . "<br />";
+            $this->$att[$i] = $arr[$att[$i]];
         }
     }
 
