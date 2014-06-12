@@ -13,11 +13,4 @@ class Client extends Personne
     {
         $this->numTel = $numTel;
     }
-
-    public static function getAll()
-    {
-    	// TODO return list of objects Client
-
-    	return Array();
-    }
 }
