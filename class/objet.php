@@ -18,8 +18,11 @@ class Objet
         $bdd = new Db();
         $result = Array();
 
+        echo $dbName . "<br />";
+
         $requete_prepare = $bdd->db->prepare("SELECT * FROM :table"); // on prépare notre requête
         $requete_prepare->execute(array( 'table' => $dbName ));
+
         while($ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)) {
             echo print_r($ligne, true) . "<br />";
             $temp = new $className();
