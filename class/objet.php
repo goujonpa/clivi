@@ -13,6 +13,7 @@ class Objet
 
     public static function getAll()
     {
+        return array("1", "2", "3");
         $className = get_called_class();
         $dbName = lcfirst($className);
         $bdd = new Db();
