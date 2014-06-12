@@ -13,8 +13,9 @@ class Objet
 
     public static function getAll()
     {
-        return array("1", "2", "3");
         $className = get_called_class();
+        echo $className;
+        die();
         $dbName = lcfirst($className);
         $bdd = new Db();
         $result = Array();
