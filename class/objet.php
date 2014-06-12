@@ -7,7 +7,7 @@ class Objet
         $att = get_object_vars($this);
 
         for ($i=0; $i < count($att); $i++) { 
-            $this->$att[i] = $arr[i];
+            $this->{$att[i]} = $arr[$att[i]];
         }
     }
 
