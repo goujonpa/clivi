@@ -12,16 +12,16 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personne <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Personnel</li>
-                            <li><a href="#persList">Liste</a></li>
-                            <li><a href="#persAdd">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/listePersonnel">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/addPersonnel">Ajouter</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Client</li>
-                            <li><a href="#clientList">Liste</a></li>
-                            <li><a href="#clientAdd">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/listeClient">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>personne/addClient">Ajouter</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -53,7 +53,6 @@
                         </ul>
                     </li>
                     <li><a href="#contact">Statistiques</a></li>
-                    <li class="active"><a href="#">Home</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
