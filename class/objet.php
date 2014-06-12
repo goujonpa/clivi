@@ -13,15 +13,15 @@ class Objet
 
     public static function getAll()
     {
-    	// TODO return list of objects Client
-        $dbName = lcfirst(get_called_class());
+        $className = get_called_class();
+        $dbName = lcfirst($className);
         $bdd = new Db();
         $result = Array();
 
         $requete_prepare = $bdd->db->prepare("SELECT * FROM :table"); // on prépare notre requête
         $requete_prepare->execute(array( 'table' => $dbName ));
         while($ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)) {
-            $temp = new get_called_class()();
+            $temp = new $className();
             $temp->fromDb($ligne);
             $result[] = $temp;
         }
