@@ -4,7 +4,7 @@ class Objet
 {
     public function fromDb($arr)
     {
-        $att = get_object_vars($this)
+        $att = get_object_vars($this);
 
         for ($i=0; $i < count($att); $i++) { 
             $this->$att[i] = $arr[i];
