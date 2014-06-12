@@ -2,7 +2,7 @@
 
 class Client extends Personne
 {
-    private $numTel;
+    protected $numTel;
 
     public function numTel()
     {

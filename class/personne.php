@@ -2,9 +2,9 @@
 
 class Personne extends Objet
 {
-    private $id;
-    private $nom;
-    private $prenom;
+    protected $id;
+    protected $nom;
+    protected $prenom;
 
     public function id()
     {
