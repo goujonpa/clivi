@@ -5,6 +5,7 @@ class Objet
     public function fromDb($arr)
     {
         $att = get_object_vars($this);
+        print_r($att);
 
         for ($i=0; $i < count($att); $i++) {
             echo $att[i] . "<br />";
