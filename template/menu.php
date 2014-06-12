@@ -12,7 +12,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personne <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Personnel</li>
@@ -53,7 +53,6 @@
                         </ul>
                     </li>
                     <li><a href="#contact">Statistiques</a></li>
-                    <li class="active"><a href="#">Home</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
