@@ -1,6 +1,6 @@
 <?php
 
-class Personne
+class Personne extends Objet
 {
     private $id;
     private $nom;

@@ -14,7 +14,7 @@ class Objet
     public static function getAll()
     {
     	// TODO return list of objects Client
-        
+        echo get_called_class();
     	return Array();
     }
 }
