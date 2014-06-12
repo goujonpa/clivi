@@ -5,23 +5,25 @@ class Objet
     public function fromDb($arr)
     {
         $att = get_object_vars($this);
+        $attKeys = array_keys($att);
 
-        for ($i=0; $i < count($att); $i++) { 
-            $this->$att[i] = $arr[i];
+        for ($i=0; $i < count($att); $i++) {
+            $this->$attKeys[$i] = $arr[$attKeys[$i]];
         }
     }
 
     public static function getAll()
     {
-    	// TODO return list of objects Client
-        $dbName = lcfirst(get_called_class());
+        $className = get_called_class();
+        $dbName = lcfirst($className);
         $bdd = new Db();
         $result = Array();
 
-        $requete_prepare = $bdd->db->prepare("SELECT * FROM :table"); // on prépare notre requête
-        $requete_prepare->execute(array( 'table' => $dbName ));
+        $requete_prepare = $bdd->db->prepare("SELECT * FROM client"); // on prépare notre requête
+        $requete_prepare->execute(); //array( 'table' => $dbName ));
+
         while($ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)) {
-            $temp = new get_called_class()();
+            $temp = new $className();
             $temp->fromDb($ligne);
             $result[] = $temp;
         }
