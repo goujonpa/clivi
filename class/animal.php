@@ -1,6 +1,6 @@
 <?php
 
-class Animal
+class Animal extends Objet
 {
     private $nom;
     private $proprio;

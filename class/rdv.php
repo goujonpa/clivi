@@ -1,8 +1,10 @@
 <?php
 
-class Rdv
+class Rdv extends Objet
 {
     private $id;
+    private $veterinaire;
+    private $animal;
     private $date;
     private $duree;
 
@@ -15,6 +17,22 @@ class Rdv
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    
+    public function veterinaire()
+    {
+        return $this->veterinaire;
+    }
+    
+    public function setVeterinaire($veterinaire)
+    {
+        $this->veterinaire = $veterinaire;
+    }
+
+    public function animal()
+    {
+        return $this->animal;
     }
 
     public function date()

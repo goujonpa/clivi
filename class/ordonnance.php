@@ -1,9 +1,11 @@
 <?php
 
-class Ordonnance
+class Ordonnance extends Objet
 {
     private $id;
-    private $date_edition;
+    private $veterinaire;
+    private $animal;
+    private $date;
     private $prix;
 
     public function id()
@@ -24,6 +26,26 @@ class Ordonnance
     public function setDate($date)
     {
         $this->date = $date;
+    }
+
+    public function veterinaire()
+    {
+        return $this->veterinaire;
+    }
+    
+    public function setVeterinaire($veterinaire)
+    {
+        $this->veterinaire = $veterinaire;
+    }
+
+    public function animal()
+    {
+        return $this->animal;
+    }
+    
+    public function setAnimal($animal)
+    {
+        $this->animal = $animal;
     }
 
     public function prix()

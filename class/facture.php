@@ -1,6 +1,6 @@
 <?php
 
-class Facture
+class Facture extends Objet
 {
     private $id;
     private $employe;

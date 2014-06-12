@@ -1,8 +1,9 @@
 <?php
 
-class Race
+class Race extends Objet
 {
     private $nom;
+    private $espece;
     private $prix_intervention;
 
     public function nom()
@@ -13,6 +14,16 @@ class Race
     public function setNom($nom)
     {
         $this->nom = $nom;
+    }
+
+    public function espece()
+    {
+        return $this->espece;
+    }
+    
+    public function setEspece($espece)
+    {
+        $this->espece = $espece;
     }
 
     public function prix_consult()

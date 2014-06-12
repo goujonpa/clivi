@@ -1,6 +1,6 @@
 <?php
 
-class Prestation
+class Prestation extends Objet
 {
     private $id;
     private $description;

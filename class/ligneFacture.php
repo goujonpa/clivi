@@ -1,20 +1,65 @@
 <?php
 
-class LigneFacture
+class LigneFacture extends Objet
 {
-    private $num;
+    private $id;
+    private $facture;
+    private $prestation;
+    private $ordonnance;
+    private $produit;
     private $quantite;
     private $remise;
 
-    public function num()
+    public function id()
     {
-        return $this->num;
+        return $this->id;
     }
     
-    public function setNum($num)
+    public function setId($id)
     {
-        $this->num = $num;
+        $this->id = $id;
     }
+
+    public function facture()
+    {
+        return $this->facture;
+    }
+    
+    public function setFacture($facture)
+    {
+        $this->facture = $facture;
+    }
+
+    public function prestation()
+    {
+        return $this->prestation;
+    }
+    
+    public function setPrestation($prestation)
+    {
+        $this->prestation = $prestation;
+    }
+
+    public function ordonnance()
+    {
+        return $this->ordonnance;
+    }
+    
+    public function setOrdonnance($ordonnance)
+    {
+        $this->ordonnance = $ordonnance;
+    }
+
+    public function produit()
+    {
+        return $this->produit;
+    }
+    
+    public function setProduit($produit)
+    {
+        $this->produit = $produit;
+    }
+
 
     public function quantite()
     {

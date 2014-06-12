@@ -1,6 +1,6 @@
 <?php
 
-class Espece
+class Espece extends Objet
 {
     private $nom;
     private $prix_consult;

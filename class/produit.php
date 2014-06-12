@@ -1,20 +1,20 @@
 <?php
 
-class Consommable
+class Produit extends Objet
 {
-    private $ref;
+    private $id;
     private $nom;
     private $prix;
-    private $type;
+    private $isMedicament;
     
-    public function ref()
+    public function id()
     {
-        return $this->ref;
+        return $this->id;
     }
     
-    public function setRef($ref)
+    public function setId($id)
     {
-        $this->ref = $ref;
+        $this->id = $id;
     }
 
     public function nom()
@@ -37,13 +37,13 @@ class Consommable
         $this->prix = $prix;
     }
 
-    public function type()
+    public function isMedicament()
     {
-        return $this->type;
+        return $this->isMedicament;
     }
     
-    public function setType($type)
+    public function setIsMedicament($isMedicament)
     {
-        $this->type = $type;
+        $this->isMedicament = $isMedicament;
     }
 }

@@ -2,15 +2,26 @@
 
 class Employe extends Personne
 {
-    private $id;
+    private $idNational;
+    private $isVeterinaire;
 
-    public function id()
+    public function idNational()
     {
-        return $this->id;
+        return $this->idNational;
     }
     
-    public function setId($id)
+    public function setIdNational($idNational)
     {
-        $this->id = $id;
+        $this->idNational = $idNational;
+    }
+
+    public function isVeterinaire()
+    {
+        return $this->isVeterinaire;
+    }
+    
+    public function setIsVeterinaire($isVeterinaire)
+    {
+        $this->isVeterinaire = $isVeterinaire;
     }
 }
