@@ -11,7 +11,7 @@
             <?php foreach($listArray as $line): ?>
                 <tr>
                 <?php foreach($listParams["keys"] as $key): ?>
-                    <td><?php echo $line[$key]; ?></td>
+                    <td><?php echo $line->$key; ?></td>
                 <?php endforeach; ?>
                 </tr>
             <?php endforeach; ?>
