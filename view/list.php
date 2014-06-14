@@ -19,7 +19,4 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <pre>
-     <?php print_r($listArray); ?>
-    </pre>
 </div>

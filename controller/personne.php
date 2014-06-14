@@ -13,6 +13,10 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "listePersonnel":
+		$listArray = Client::getAll();
+		$listParams = array("title" => "Liste du personnel",
+							"keys" => array("id", "nom", "prenom", "isVeterinaire", "idNational"));
+		include 'view/list.php';
 		break;
 	case "listeClient":
 		$listArray = Client::getAll();
