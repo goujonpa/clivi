@@ -5,7 +5,9 @@
     </div>
     <table class="table">
         <thead>
-
+            <?php foreach($listParams["keys"] as $key): ?>
+                <th><?php echo ucfirst($key); ?></th>
+            <?php endforeach; ?>
         </thead>
         <tbody>
             <?php foreach($listArray as $line): ?>
