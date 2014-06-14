@@ -16,7 +16,8 @@ switch($action) {
 		break;
 	case "listeClient":
 		$listArray = Client::getAll();
-		$listParams = array("title" => "Liste des clients");
+		$listParams = array("title" => "Liste des clients"
+							"keys" => array("id", "nom", "prenom", "numTel"));
 		include 'view/list.php';
 		break;
 	case "addPersonnel":
