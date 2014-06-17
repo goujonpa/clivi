@@ -1,6 +1,6 @@
     <div id="footer">
       <div class="container">
-        <p class="text">NF17 - ©Team CAMP 2014 - Developed by Matthieu GUFFROY, Clément MERCIER, Alexandre CORTYL & Paul GOUJON</p>
+        <p class="muted-text">NF17 - ©Team CAMP 2014 - Developed by Matthieu GUFFROY, Clément MERCIER, Alexandre CORTYL & Paul GOUJON</p>
       </div>
     </div>
 
