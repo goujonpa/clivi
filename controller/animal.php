@@ -4,24 +4,24 @@
 */
 
 // Implemented actions
-$actions = array("listeAnimal", "addAnimal", "editAnimal");
+$actions = array("liste", "add", "edit");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
-	$action = "listeAnimal";
+	$action = "liste";
 }
 
 switch($action) {
-	case "listeAnimal":
+	case "liste":
 		$listArray = Animal::getAll();
 		$listParams = array("title" => "Liste des animaux de la clinique",
 							"keys" => array("nom", "proprio", "race", "poids", "genre", "sterile", "dateNaissance", "dateDeces", "taille", "code"));
 		include 'view/list.php';
 		break;
-	case "addAnimal":
+	case "add":
 
 		break;
-	case "editAnimal":
+	case "edit":
 
 		break;
 	default:

@@ -4,24 +4,24 @@
 */
 
 // Implemented actions
-$actions = array("listeOrd", "addOrd", "editOrd");
+$actions = array("liste", "add", "edit");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
-	$action = "listeOrd";
+	$action = "liste";
 }
 
 switch($action) {
-	case "listeOrd":
+	case "liste":
 		$listArray = Ordonnance::getAll();
 		$listParams = array("title" => "Liste des ordonnances",
 							"keys" => array("id", "animal", "veterinaire", "date", "prix"));
 		include 'view/list.php';
 		break;
-	case "addOrd":
+	case "add":
 
 		break;
-	case "editOrd":
+	case "edit":
 
 		break;
 	default:

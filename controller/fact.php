@@ -4,24 +4,30 @@
 */
 
 // Implemented actions
-$actions = array("listeFact", "addFact", "editFact");
+$actions = array("liste", "add", "edit");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
-	$action = "listeFact";
+	$action = "liste";
 }
 
 switch($action) {
-	case "listeFact":
+	case "liste":
 		$listArray = Facture::getAll();
 		$listParams = array("title" => "Liste des factures",
 							"keys" => array("id", "employe", "animal", "dateEdition", "datePaiement", "moyenPaiement", "prixTotal"));
 		include 'view/list.php';
 		break;
-	case "addFact":
+		case "listePersonnel":
+		$listArray = Employe::getAll();
+		$listParams = array("title" => "Liste du personnel",
+							"keys" => array("id", "nom", "prenom", "isVeterinaire", "idNational"));
+		include 'view/list.php';
+		break;
+	case "add":
 
 		break;
-	case "editFact":
+	case "edit":
 
 		break;
 	default:
