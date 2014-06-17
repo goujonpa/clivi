@@ -2,6 +2,8 @@
 
 class Objet
 {
+    public $primaryAttr = "id";
+
     public function fromDb($arr)
     {
         $att = get_object_vars($this);

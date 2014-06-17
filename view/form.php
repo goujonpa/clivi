@@ -4,6 +4,7 @@
         <h1><?php echo $formConf->getTitle(); ?></h1>
     </div>
     <form role="form" method="post">
+        <input type="hidden" name="submitForm" value="1">
         <?php foreach($formConf->getFields() as $field): ?>
             <?php echo $field->html(); ?>
         <?php endforeach; ?>
