@@ -16,10 +16,15 @@ class Objet
         }
     }
 
-    public static function getAll()
-    {
+    public static function dbName() {
         $className = get_called_class();
         $dbName = lcfirst($className);
+        return $dbName;
+    }
+
+    public static function getAll()
+    {
+        $dbName = self::dbName();
         $bdd = new Db();
         $result = Array();
 
@@ -51,22 +56,32 @@ class Objet
         return $ret;
     }
 
-    public static function insert()
+    public function insert()
     {
-        $className = get_called_class();
-        $dbName = lcfirst($className);
+        $dbName = self::dbName();
         $bdd = new Db();
-        $result = Array();
 
-        $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName); // on prépare notre requête
-        $requete_prepare->execute();
-
-        while($ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)) {
-            $temp = new $className();
-            $temp->fromDb($ligne);
-            $result[] = $temp;
+        $values = array();
+        $params = array();
+        foreach(array_keys(get_object_vars($this)) as $keyName) {
+            if($keyName == "primaryAttr") { continue; }
+            if($keyName == $this->primaryAttr) { 
+                $values[$keyName] = "nextval('".$dbName."_id_seq'::regclass)";
+                continue;
+            }
+            $values[$keyName] = ":".$keyName;
+            $params[$keyName] = $this->$keyName;
         }
 
-        return $result;
+        $req = "INSERT INTO ".$dbName." (".implode(",", array_keys($values)).")
+        VALUES (".implode(",", array_values($values)).")";
+
+        //debug
+        echo $req;
+        die();
+
+        $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
+        $requete_prepare->execute($params);
+
     }
 }
