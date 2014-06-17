@@ -17,7 +17,7 @@ class Form {
 	}
 
 	public function getFields() {
-		return $this->fields();
+		return $this->fields;
 	}
 
 }
