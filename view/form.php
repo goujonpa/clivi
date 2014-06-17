@@ -3,6 +3,7 @@
     <div class="page-header">
         <h1><?php echo $formConf->getTitle(); ?></h1>
     </div>
+    <?php echo $formConf->getAlerts(); ?>
     <form role="form" method="post">
         <input type="hidden" name="submitForm" value="1">
         <?php foreach($formConf->getFields() as $field): ?>

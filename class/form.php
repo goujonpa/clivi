@@ -38,4 +38,8 @@ class Form {
 		return $this->fields;
 	}
 
+	public function getAlerts() {
+		return '<p class="bg-danger">Code en cours d\'implémentation, l\'enregistrement n\'a pas été ajouté !</p>';'
+	}
+
 }
