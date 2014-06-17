@@ -5,10 +5,10 @@ class Facture extends Objet
     private $id;
     private $employe;
     private $animal;
-    private $date_edition;
-    private $date_paiement;
-    private $moyen_paiement;
-    private $prix_total;
+    private $dateEdition;
+    private $datePaiement;
+    private $moyenPaiement;
+    private $prixTotal;
 
     public function id()
     {

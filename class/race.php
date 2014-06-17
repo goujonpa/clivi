@@ -4,7 +4,7 @@ class Race extends Objet
 {
     private $nom;
     private $espece;
-    private $prix_intervention;
+    private $prixIntervention;
 
     public function nom()
     {
