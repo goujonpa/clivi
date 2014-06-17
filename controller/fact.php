@@ -15,7 +15,7 @@ switch($action) {
 	case "listeFact":
 		$listArray = Employe::getAll();
 		$listParams = array("title" => "Liste des factures",
-							"keys" => array("id", "employe", "animal", "date_edition", "date_paiement", "moyen_paiement", "prix_total"));
+							"keys" => array("id", "employe", "animal", "dateEdition", "datePaiement", "moyenPaiement", "prixTotal"));
 		include 'view/list.php';
 		break;
 	case "addFact":
