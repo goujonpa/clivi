@@ -1,5 +1,5 @@
     <div id="footer">
-      <div class="container">
+      <div class="foote-container">
         <p class="text-footer">NF17 - ©Team CAMP 2014 - Developed by Matthieu GUFFROY, Clément MERCIER, Alexandre CORTYL & Paul GOUJON</p>
       </div>
     </div>
