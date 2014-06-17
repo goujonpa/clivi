@@ -38,11 +38,13 @@ switch($action) {
 		break;
 	case "editPersonnel":
 		$employe = new Employe();
+        $employe->select($_GET['id']);
 		$formConf = $employe->getForm();
 		include 'view/form.php';
 		break;
 	case "editClient":
 		$client = new Client();
+        $client->select($_GET['id']);
         $formConf = $client->getForm();
         include 'view/form.php';
 		break;
