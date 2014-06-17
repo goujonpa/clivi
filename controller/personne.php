@@ -16,6 +16,7 @@ switch($action) {
 		$listArray = Employe::getAll();
 		$listParams = array("title" => "Liste du personnel",
 							"keys" => array("id", "nom", "prenom", "isVeterinaire", "idNational"));
+		$editLink = "editPersonnel";
 		include 'view/list.php';
 		break;
 	case "listeClient":
@@ -33,6 +34,12 @@ switch($action) {
         $client = new Client();
         $formConf = $client->getForm();
         include 'view/form.php';
+		break;
+	case "editPersonnel":
+		$
+		break;
+	case "editClient":
+
 		break;
 	default:
 		include 'view/404.php';
