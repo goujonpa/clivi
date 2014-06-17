@@ -73,7 +73,7 @@ class Objet
             $params[$keyName] = $this->$keyName;
         }
 
-        $req = "INSERT INTO ".$dbName." (".implode(",", array_keys($values).")
+        $req = "INSERT INTO ".$dbName." (".implode(",", array_keys($values)).")
         VALUES (".implode(",", array_values($values)).")";
 
         //debug
