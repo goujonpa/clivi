@@ -9,7 +9,7 @@ class Form {
 		$this->fields = $this->object->getFields();
 
 		// Update or Insert
-		if($this->object->{$this->object->primaryAttr}) {
+		if($this->object->{$this->object->primaryAttr}()) {
 			$this->action = "Modifier";
 		} else {
 			$this->action = "Ajouter";
@@ -19,7 +19,7 @@ class Form {
 		if(isset($_POST["submitForm"])) {
 			$post = true;
 			// Apply validators
-			
+
 			// If all validators ok, commit
 		} else {
 			$post = false;
