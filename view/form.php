@@ -3,7 +3,7 @@
     <div class="page-header">
         <h1><?php echo $formConf->getTitle(); ?></h1>
     </div>
-    <form role="form">
+    <form role="form" action ="action.php">
         <?php foreach($formConf->getFields() as $field): ?>
             <?php echo $field->html(); ?>
         <?php endforeach; ?>

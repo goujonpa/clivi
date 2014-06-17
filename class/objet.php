@@ -47,4 +47,23 @@ class Objet
         }
         return $ret;
     }
+
+    public static function insertAll()
+    {
+        $className = get_called_class();
+        $dbName = lcfirst($className);
+        $bdd = new Db();
+        $result = Array();
+
+        $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName); // on prépare notre requête
+        $requete_prepare->execute();
+
+        while($ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)) {
+            $temp = new $className();
+            $temp->fromDb($ligne);
+            $result[] = $temp;
+        }
+
+        return $result;
+    }
 }
