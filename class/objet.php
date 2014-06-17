@@ -45,6 +45,7 @@ class Objet
     {
         $ret = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
+            if($keyName == "primaryAttr") { continue; }
             $ret[] = new Field($keyName, $this->$keyName);
         }
         return $ret;
