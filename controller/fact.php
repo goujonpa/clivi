@@ -13,7 +13,7 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "listeFact":
-		$listArray = Employe::getAll();
+		$listArray = Facture::getAll();
 		$listParams = array("title" => "Liste des factures",
 							"keys" => array("id", "employe", "animal", "dateEdition", "datePaiement", "moyenPaiement", "prixTotal"));
 		include 'view/list.php';

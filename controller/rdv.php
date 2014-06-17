@@ -13,7 +13,7 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "listeRdv":
-		$listArray = Employe::getAll();
+		$listArray = Rdv::getAll();
 		$listParams = array("title" => "Liste des rendez-vous",
 							"keys" => array("id", "animal", "veterinaire", "date", "duree"));
 		include 'view/list.php';
