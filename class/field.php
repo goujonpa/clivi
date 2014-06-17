@@ -10,8 +10,8 @@ class Field {
 
 	public function html() {
 		return '<div class="form-group">
-    <label for="form'.$name.'">'.ucfirst($name).'</label>
-    <input type="text" class="form-control" name="'.$name.'" >
+    <label for="form'.$this->name.'">'.ucfirst($this->name).'</label>
+    <input type="text" class="form-control" name="'.$this->name.'" >
   </div>';
 	}
 
