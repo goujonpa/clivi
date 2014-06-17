@@ -5,17 +5,12 @@
   /* Set the fixed height of the footer here */
   height: 30px;
   background-color: #108a93;
-}
-
-.footer-container {
-  width: auto;
-  max-width: 680px;
   padding-top: 10px;
   padding-bottom: 0px;
   text-align: center;
+  color: black;
 }
 
 .text-footer {
 	text-align: center;
-	color: black;
 }
