@@ -26,20 +26,3 @@ class Field {
 	}
 
 }
-
-class BoolField extends Field
-{
-    public function __construct($name, &$value)
-    {
-        parent::__construct($name, &$value);
-    }
-
-    public function validate()
-    {
-        $this->value = $POST[$this->name];
-        if (!is_bool($this->value))
-            return false;
-        return true;
-    }
-}
-
