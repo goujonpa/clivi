@@ -15,7 +15,7 @@
                 <?php foreach($listParams["keys"] as $key): ?>
                     <td><?php echo $line->{$key}(); ?></td>
                 <?php endforeach; ?>
-                    <td> <a type="button" class="btn btn-primary" href="<?php echo $base_url.'/'.$editLink.'?'.listParams['keys'][0].'=' ?>">Editer</a>
+                    <td> <a type="button" class="btn btn-primary" href="<?php echo $base_url.'/'.$editLink.'?'.$listParams['keys'][0].'=' ?>">Editer</a>
                 </tr>
             <?php endforeach; ?>
         </tbody>
