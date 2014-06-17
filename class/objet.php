@@ -30,4 +30,11 @@ class Objet
 
     	return $result;
     }
+
+    public function getForm()
+    {
+        $form = new Form();
+        $form->setObject($this);
+        return $form;
+    }
 }
