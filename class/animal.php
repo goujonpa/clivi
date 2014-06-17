@@ -2,6 +2,7 @@
 
 class Animal extends Objet
 {
+    private $id;
     private $nom;
     private $proprio;
     private $race;
@@ -12,6 +13,16 @@ class Animal extends Objet
     private $date_deces;
     private $taille;
     private $code;
+
+    public function id()
+    {
+        return $this->id;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function nom()
     {
