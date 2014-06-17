@@ -26,13 +26,13 @@ class Race extends Objet
         $this->espece = $espece;
     }
 
-    public function prix_consult()
+    public function prixIntervention()
     {
-        return $this->prix_intervention;
+        return $this->prixIntervention;
     }
     
-    public function setPrix_intervention($prix_intervention)
+    public function setPrixIntervention($prixIntervention)
     {
-        $this->prix_intervention = $prix_intervention;
+        $this->prixIntervention = $prixIntervention;
     }
 }

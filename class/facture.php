@@ -40,43 +40,43 @@ class Facture extends Objet
         $this->animal = $animal;
     }
 
-    public function date_edition()
+    public function dateEdition()
     {
         return $this->date_edition;
     }
     
-    public function setDate_edition($date_edition)
+    public function setDateEdition($dateEdition)
     {
-        $this->date_edition = $date_edition;
+        $this->dateEdition = $dateEdition;
     }
 
-    public function date_paiement()
+    public function datePaiement()
     {
-        return $this->date_paiement;
+        return $this->datePaiement;
     }
     
-    public function setDate_paiement($date_paiement)
+    public function setDatePaiement($datePaiement)
     {
-        $this->date_paiement = $date_paiement;
+        $this->datePaiement = $datePaiement;
     }
 
-    public function moyen_paiement()
+    public function moyenPaiement()
     {
-        return $this->moyen_paiement;
+        return $this->moyenPaiement;
     }
     
-    public function setMoyen_paiement($moyen_paiement)
+    public function setMoyenPaiement($moyenPaiement)
     {
-        $this->moyen_paiement = $moyen_paiement;
+        $this->moyenPaiement = $moyenPaiement;
     }
 
-    public function prix_total()
+    public function prixTotal()
     {
-        return $this->prix_total;
+        return $this->prixTotal;
     }
     
-    public function setPrix_total($prix_total)
+    public function setPrixTotal($prixTotal)
     {
-        $this->prix_total = $prix_total;
+        $this->prixTotal = $prixTotal;
     }
 }
