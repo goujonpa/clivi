@@ -77,8 +77,8 @@ class Objet
         VALUES (".implode(",", array_values($values)).")";
 
         //debug
-        echo $req;
-        die();
+        //echo $req;
+        //die();
 
         $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
         $requete_prepare->execute($params);
