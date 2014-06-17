@@ -90,6 +90,35 @@ class Objet
         }
     }
 
+    public function update()
+    {
+        $dbName = self::dbName();
+        $bdd = new Db();
+
+        $values = array();
+        $params = array();
+        foreach(array_keys(get_object_vars($this)) as $keyName) {
+            if($keyName == "primaryAttr") { continue; }
+            $params[$keyName] = $this->$keyName;
+            if($keyName == $this->primaryAttr) { continue; }
+            $values[$keyName] = $keyName" = :".$keyName;
+        }
+
+        $req = "UPDATE ".$dbName." SET ".implode(",", array_values($values)).") WHERE ".$this->primaryAttr." = :".$this->primaryAttr;
+
+        $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
+
+        if (!$requete_prepare) { 
+            throw new Exception("PDO::errorInfo(): (STEP 1)\n". print_r($bdd->db->errorInfo(), true));
+        } 
+
+        $result = $requete_prepare->execute($params);
+
+        if($result != 1) {
+            throw new Exception("RESULT : ".print_r($result,true)."\n".print_r($requete_prepare->errorInfo(),true)); 
+        }
+    }
+
     public function select($id) {
         $dbName = self::dbName();
         $bdd = new Db();
