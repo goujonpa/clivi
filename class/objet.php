@@ -51,7 +51,7 @@ class Objet
         return $ret;
     }
 
-    public static function insertAll()
+    public static function insert()
     {
         $className = get_called_class();
         $dbName = lcfirst($className);

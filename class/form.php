@@ -25,6 +25,13 @@ class Form {
 			}
 
 			// If all validators ok, commit
+			if($success) {
+				if($this->action == "Modifier") {
+					$this->object->update();
+				} else {
+					$this->object->insert();
+				}
+			}
 		} else {
 			$post = false;
 		}
