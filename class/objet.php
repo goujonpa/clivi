@@ -97,7 +97,7 @@ class Objet
         $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE ".$this->primaryAttr." = :id"); // on prépare notre requête
         $requete_prepare->execute(array("id" => $id));
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)
+        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
         $this->fromDb($ligne);
     }
 }
