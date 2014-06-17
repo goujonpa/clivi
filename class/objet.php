@@ -24,6 +24,7 @@ class Objet
 
     public static function getAll()
     {
+        $className = get_called_class();
         $dbName = self::dbName();
         $bdd = new Db();
         $result = Array();
