@@ -19,7 +19,9 @@ switch($action) {
 		include 'view/list.php';
 		break;
 	case "add":
-
+		$rdv = new Rdv();
+		$formConf = $rdv->getForm();
+		include 'view/form.php';
 		break;
 	case "edit":
 

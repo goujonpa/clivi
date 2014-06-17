@@ -25,7 +25,9 @@ switch($action) {
 		include 'view/list.php';
 		break;
 	case "add":
-
+		$facture = new Facture();
+		$formConf = $facture->getForm();
+		include 'view/form.php';
 		break;
 	case "edit":
 

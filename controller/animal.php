@@ -19,7 +19,9 @@ switch($action) {
 		include 'view/list.php';
 		break;
 	case "add":
-
+		$animal = new Animal();
+		$formConf = $animal->getForm();
+		include 'view/form.php';
 		break;
 	case "edit":
 

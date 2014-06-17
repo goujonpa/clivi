@@ -19,7 +19,9 @@ switch($action) {
 		include 'view/list.php';
 		break;
 	case "add":
-
+		$ordonnance = new Ordonnance();
+		$formConf = $ordonnance->getForm();
+		include 'view/form.php';
 		break;
 	case "edit":
 
