@@ -1,7 +1,7 @@
 <?php
 
 class Field {
-	protected $name = $name;
+	protected $name;
 	protected $value;
 	public function __construct($name, &$value) {
 		$this->name = $name;
