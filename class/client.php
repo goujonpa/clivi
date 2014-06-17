@@ -2,15 +2,15 @@
 
 class Client extends Personne
 {
-    protected $numTel;
+    protected $num_tel;
 
-    public function numTel()
+    public function num_tel()
     {
-        return $this->numTel;
+        return $this->num_tel;
     }
     
-    public function setNumTel($numTel)
+    public function setNum_tel($num_tel)
     {
-        $this->numTel = $numTel;
+        $this->num_tel = $num_tel;
     }
 }

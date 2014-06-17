@@ -76,7 +76,7 @@ class Objet
 
         //$req = "INSERT INTO ".$dbName." (".implode(",", array_keys($values)).")
         //VALUES (".implode(",", array_values($values)).")";
-        $req = "INSERT INTO client (id,nom,prenom,numTel) VALUES (nextval('client_id_seq'::regclass), :nom, :prenom, :numTel)";
+        $req = "INSERT INTO client (id,nom,prenom,num_tel) VALUES (nextval('client_id_seq'::regclass), :nom, :prenom, :num_tel)";
 
 
         //debug
