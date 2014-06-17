@@ -36,7 +36,7 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "editPersonnel":
-	
+
 		break;
 	case "editClient":
 
