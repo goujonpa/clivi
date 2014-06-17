@@ -15,6 +15,7 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png" />
 
     <style>
     /* Sticky footer styles
