@@ -9,8 +9,8 @@ class Animal extends Objet
     private $poids;
     private $genre;
     private $sterile;
-    private $date_naissance;
-    private $date_deces;
+    private $dateNaissance;
+    private $dateDeces;
     private $taille;
     private $code;
 
