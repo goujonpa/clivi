@@ -37,7 +37,7 @@ class Form {
 					$this->error = $e->getMessage();
 				}
 			} else {
-				$this->error = "Tout les conditions de validations de formulaire ne sont pas passés."
+				$this->error = "Tout les conditions de validations de formulaire ne sont pas passés.";
 			}
 		} else {
 			$post = false;
