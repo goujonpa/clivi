@@ -19,6 +19,10 @@ class Form {
 		if(isset($_POST["submitForm"])) {
 			$post = true;
 			// Apply validators
+			$success = true;
+			foreach($this->fields as $field) {
+				$success = $success && $field->validate();
+			}
 
 			// If all validators ok, commit
 		} else {
