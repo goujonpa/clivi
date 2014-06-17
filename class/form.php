@@ -19,8 +19,19 @@ class Form {
 		if(isset($_POST["submitForm"])) {
 			$post = true;
 			// Apply validators
+			$success = true;
+			foreach($this->fields as $field) {
+				$success = $success && $field->validate();
+			}
 
 			// If all validators ok, commit
+			if($success) {
+				if($this->action == "Modifier") {
+					$this->object->update();
+				} else {
+					$this->object->insert();
+				}
+			}
 		} else {
 			$post = false;
 		}
@@ -36,6 +47,10 @@ class Form {
 
 	public function getFields() {
 		return $this->fields;
+	}
+
+	public function getAlerts() {
+		return '<p class="bg-danger">Code en cours d\'implémentation, l\'enregistrement n\'a pas été ajouté !</p>';
 	}
 
 }
