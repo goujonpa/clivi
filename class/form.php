@@ -11,7 +11,7 @@ class Form {
 	}
 
 	public function getTitle() {
-		return "Ajouter un ".get_class($this->objet);
+		return "Ajouter un ".get_class($this->object);
 	}
 
 }

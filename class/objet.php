@@ -34,7 +34,7 @@ class Objet
     public function getForm()
     {
         $form = new Form();
-        $form->setObjet($this);
+        $form->setObject($this);
         return $form;
     }
 }
