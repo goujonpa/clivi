@@ -15,6 +15,7 @@
                 <?php foreach($listParams["keys"] as $key): ?>
                     <td><?php echo $line->{$key}(); ?></td>
                 <?php endforeach; ?>
+                    <td> <button >Editer</button>
                 </tr>
             <?php endforeach; ?>
         </tbody>
