@@ -35,8 +35,13 @@
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
-        height: 60px;
-        background-color: #f5f5f5;
+        height: 40px;
+        background-color: #108a93;        
+        padding-top: 10px;
+        padding-bottom: 0px;
+        text-align: center;
+        color: black;
+
     }
 
 
