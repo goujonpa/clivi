@@ -15,7 +15,7 @@
                 <?php foreach($listParams["keys"] as $key): ?>
                     <td><?php echo $line->{$key}(); ?></td>
                 <?php endforeach; ?>
-                    <td> <button type="button" class="btn btn-primary">Editer</button>
+                    <td> <a type="button" class="btn btn-primary" href="">Editer</a>
                 </tr>
             <?php endforeach; ?>
         </tbody>
