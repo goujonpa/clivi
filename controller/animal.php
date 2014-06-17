@@ -15,7 +15,7 @@ switch($action) {
 	case "listeAnimal":
 		$listArray = Animal::getAll();
 		$listParams = array("title" => "Liste des animaux de la clinique",
-							"keys" => array("nom", "proprio", "race", "poids", "genre", "sterile", "date de naissance", "date de décès", "taille", "code d'identification"));
+							"keys" => array("nom", "proprio", "race", "poids", "genre", "sterile", "date_naissance", "date_deces", "taille", "code"));
 		include 'view/list.php';
 		break;
 	case "addAnimal":
