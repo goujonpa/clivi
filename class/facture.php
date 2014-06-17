@@ -42,7 +42,7 @@ class Facture extends Objet
 
     public function dateEdition()
     {
-        return $this->date_edition;
+        return $this->dateEdition;
     }
     
     public function setDateEdition($dateEdition)
