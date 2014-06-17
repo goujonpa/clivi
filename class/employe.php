@@ -2,26 +2,26 @@
 
 class Employe extends Personne
 {
-    protected $idNational;
-    protected $isVeterinaire;
+    protected $id_national;
+    protected $is_veterinaire;
 
-    public function idNational()
+    public function id_national()
     {
-        return $this->idNational;
+        return $this->id_national;
     }
     
-    public function setIdNational($idNational)
+    public function setId_national($id_national)
     {
-        $this->idNational = $idNational;
+        $this->id_national = $id_national;
     }
 
-    public function isVeterinaire()
+    public function is_veterinaire()
     {
-        return $this->isVeterinaire;
+        return $this->is_veterinaire;
     }
     
-    public function setIsVeterinaire($isVeterinaire)
+    public function setIs_veterinaire($isVeterinaire)
     {
-        $this->isVeterinaire = $isVeterinaire;
+        $this->is_veterinaire = $isVeterinaire;
     }
 }

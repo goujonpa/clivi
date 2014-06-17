@@ -15,14 +15,15 @@ switch($action) {
 	case "listePersonnel":
 		$listArray = Employe::getAll();
 		$listParams = array("title" => "Liste du personnel",
-							"keys" => array("id", "nom", "prenom", "isVeterinaire", "idNational"));
+							"keys" => array("id", "nom", "prenom", "is_veterinaire", "id_national"));
 		$editLink = "editPersonnel";
 		include 'view/list.php';
 		break;
 	case "listeClient":
 		$listArray = Client::getAll();
 		$listParams = array("title" => "Liste des clients",
-							"keys" => array("id", "nom", "prenom", "numTel"));
+							"keys" => array("id", "nom", "prenom", "num_tel"));
+		$editLink = "editClient";
 		include 'view/list.php';
 		break;
 	case "addPersonnel":
@@ -36,10 +37,14 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "editPersonnel":
-	
+		$employe = new Employe();
+		$formConf = $employe->getForm();
+		include 'view/form.php';
 		break;
 	case "editClient":
-
+		$client = new Client();
+        $formConf = $client->getForm();
+        include 'view/form.php';
 		break;
 	default:
 		include 'view/404.php';
