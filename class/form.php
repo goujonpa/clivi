@@ -14,4 +14,12 @@ class Form {
 		return "Ajouter un ".get_class($this->object);
 	}
 
+	public function getSubmitText() {
+		return "Ajouter";
+	}
+
+	public function getFields() {
+		return Array();
+	}
+
 }
