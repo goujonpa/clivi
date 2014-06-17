@@ -12,9 +12,10 @@ class BoolField extends Field
 
     public function validate()
     {
-        $this->value = $POST[$this->name];
-        if (!is_bool($this->value))
-            return false;
+        if (isset($_POST[$this->name]))
+            $this->value = $_POST[$this->name];
+        else
+            $this->value = NULL;
         return true;
     }
 }
