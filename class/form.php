@@ -39,7 +39,7 @@ class Form {
 	}
 
 	public function getAlerts() {
-		return '<p class="bg-danger">Code en cours d\'implémentation, l\'enregistrement n\'a pas été ajouté !</p>';'
+		return '<p class="bg-danger">Code en cours d\'implémentation, l\'enregistrement n\'a pas été ajouté !</p>';
 	}
 
 }
