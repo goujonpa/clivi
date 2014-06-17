@@ -104,7 +104,7 @@ class Objet
             $values[$keyName] = $keyName." = :".$keyName;
         }
 
-        $req = "UPDATE ".$dbName." SET ".implode(",", array_values($values)).") WHERE ".$this->primaryAttr." = :".$this->primaryAttr;
+        $req = "UPDATE ".$dbName." SET ".implode(",", array_values($values))." WHERE ".$this->primaryAttr." = :".$this->primaryAttr;
 
         $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
 
