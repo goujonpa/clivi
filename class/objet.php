@@ -74,8 +74,10 @@ class Objet
             $params[$keyName] = $this->$keyName;
         }
 
-        $req = "INSERT INTO ".$dbName." (".implode(",", array_keys($values)).")
-        VALUES (".implode(",", array_values($values)).")";
+        //$req = "INSERT INTO ".$dbName." (".implode(",", array_keys($values)).")
+        //VALUES (".implode(",", array_values($values)).")";
+        $req = "INSERT INTO client (id,nom,prenom,numTel) VALUES (nextval('client_id_seq'::regclass), :nom, :prenom, :numTel)";
+
 
         //debug
         //echo $req;
