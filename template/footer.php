@@ -1,6 +1,6 @@
     <div id="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p>NF17 - ©Team CAMP 2014 - Developed by Matthieu GUFFROY, Clément MERCIER, Alexandre CORTYL & Paul GOUJON</p>
       </div>
     </div>
 
