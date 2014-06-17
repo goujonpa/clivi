@@ -2,11 +2,11 @@
 
 class Ordonnance extends Objet
 {
-    private $id;
-    private $veterinaire;
-    private $animal;
-    private $date;
-    private $prix;
+    protected $id;
+    protected $veterinaire;
+    protected $animal;
+    protected $date;
+    protected $prix;
 
     public function id()
     {

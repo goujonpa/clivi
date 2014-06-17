@@ -2,10 +2,10 @@
 
 class Prestation extends Objet
 {
-    private $id;
-    private $description;
-    private $type;
-    private $prix;
+    protected $id;
+    protected $description;
+    protected $type;
+    protected $prix;
 
     public function id()
     {

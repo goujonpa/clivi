@@ -2,9 +2,9 @@
 
 class Race extends Objet
 {
-    private $nom;
-    private $espece;
-    private $prixIntervention;
+    protected $nom;
+    protected $espece;
+    protected $prixIntervention;
 
     public function nom()
     {

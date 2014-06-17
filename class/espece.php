@@ -2,8 +2,8 @@
 
 class Espece extends Objet
 {
-    private $nom;
-    private $prixConsult;
+    protected $nom;
+    protected $prixConsult;
 
     public function nom()
     {

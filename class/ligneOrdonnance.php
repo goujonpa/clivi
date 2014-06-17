@@ -2,10 +2,10 @@
 
 class LigneOrdonnance extends Objet
 {
-    private $ordonnance;
-    private $medicament;
-    private $quantite;
-    private $instruction;
+    protected $ordonnance;
+    protected $medicament;
+    protected $quantite;
+    protected $instruction;
 
     public function ordonnance()
     {

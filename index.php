@@ -12,7 +12,7 @@
     if(isset($url[3])) { 
         $page = $url[3]; 
     } else { 
-        $page = "index"; 
+        $page = "index";
     }
     if(isset($url[4])) { 
         $action = $url[4]; 

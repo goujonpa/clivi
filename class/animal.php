@@ -2,17 +2,17 @@
 
 class Animal extends Objet
 {
-    private $id;
-    private $nom;
-    private $proprio;
-    private $race;
-    private $poids;
-    private $genre;
-    private $sterile;
-    private $dateNaissance;
-    private $dateDeces;
-    private $taille;
-    private $code;
+    protected $id;
+    protected $nom;
+    protected $proprio;
+    protected $race;
+    protected $poids;
+    protected $genre;
+    protected $sterile;
+    protected $dateNaissance;
+    protected $dateDeces;
+    protected $taille;
+    protected $code;
 
     public function id()
     {

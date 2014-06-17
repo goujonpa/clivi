@@ -2,10 +2,10 @@
 
 class Produit extends Objet
 {
-    private $id;
-    private $nom;
-    private $prix;
-    private $isMedicament;
+    protected $id;
+    protected $nom;
+    protected $prix;
+    protected $isMedicament;
     
     public function id()
     {

@@ -2,11 +2,11 @@
 
 class Rdv extends Objet
 {
-    private $id;
-    private $veterinaire;
-    private $animal;
-    private $date;
-    private $duree;
+    protected $id;
+    protected $veterinaire;
+    protected $animal;
+    protected $date;
+    protected $duree;
 
 
     public function id()

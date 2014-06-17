@@ -2,13 +2,13 @@
 
 class LigneFacture extends Objet
 {
-    private $id;
-    private $facture;
-    private $prestation;
-    private $ordonnance;
-    private $produit;
-    private $quantite;
-    private $remise;
+    protected $id;
+    protected $facture;
+    protected $prestation;
+    protected $ordonnance;
+    protected $produit;
+    protected $quantite;
+    protected $remise;
 
     public function id()
     {

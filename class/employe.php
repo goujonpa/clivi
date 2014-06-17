@@ -2,8 +2,8 @@
 
 class Employe extends Personne
 {
-    private $idNational;
-    private $isVeterinaire;
+    protected $idNational;
+    protected $isVeterinaire;
 
     public function idNational()
     {

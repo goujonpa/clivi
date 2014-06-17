@@ -2,13 +2,13 @@
 
 class Facture extends Objet
 {
-    private $id;
-    private $employe;
-    private $animal;
-    private $dateEdition;
-    private $datePaiement;
-    private $moyenPaiement;
-    private $prixTotal;
+    protected $id;
+    protected $employe;
+    protected $animal;
+    protected $dateEdition;
+    protected $datePaiement;
+    protected $moyenPaiement;
+    protected $prixTotal;
 
     public function id()
     {
