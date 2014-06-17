@@ -25,10 +25,14 @@ switch($action) {
 		include 'view/list.php';
 		break;
 	case "addPersonnel":
-
+		$employe = new Employe();
+		$formConf = $employe->getForm();
+		include 'view/form.php';
 		break;
 	case "addClient":
-
+        $client = new Client();
+        $formConf = $client->getForm();
+        include 'view/form.php';
 		break;
 	default:
 		include 'view/404.php';
