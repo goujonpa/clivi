@@ -3,6 +3,7 @@
 class Form {
 	protected $object;
 	protected $action;
+	protected $error = null;
 
 	public function __construct(&$obj) {
 		$this->object =& $obj;
@@ -26,11 +27,17 @@ class Form {
 
 			// If all validators ok, commit
 			if($success) {
-				if($this->action == "Modifier") {
-					$this->object->update();
-				} else {
-					$this->object->insert();
+				try {
+					if($this->action == "Modifier") {
+						$this->object->update();
+					} else {
+						$this->object->insert();
+					}
+				} catch (Exception $e) {
+					$this->error = $e->getMessage();
 				}
+			} else {
+				$this->error = "Tout les conditions de validations de formulaire ne sont pas passés."
 			}
 		} else {
 			$post = false;
@@ -50,7 +57,13 @@ class Form {
 	}
 
 	public function getAlerts() {
-		return '<p class="bg-danger">Code en cours d\'implémentation, l\'enregistrement n\'a pas été ajouté !</p>';
+		if($this->error) {
+			return '<p class="bg-danger">'.$this->error.'</p>';
+		} else {
+			if(isset($_POST["submitForm"])) {
+				return '<p class="bg-success">L\'opération a réussi avec succès.</p>';
+			}
+		}
 	}
 
 }

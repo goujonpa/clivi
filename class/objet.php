@@ -80,17 +80,13 @@ class Objet
         $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
 
         if (!$requete_prepare) { 
-            echo "\nPDO::errorInfo(): (STEP 1)\n"; 
-            print_r($bdd->db->errorInfo()); 
-            die();
+            throw new Exception("PDO::errorInfo(): (STEP 1)\n". print_r($bdd->db->errorInfo(), true));
         } 
 
         $result = $requete_prepare->execute($params);
 
         if($result != 1) {
-            echo "RESULT : ".print_r($result,true)."\n";
-            print_r($requete_prepare->errorInfo()); 
-            die();
+            throw new Exception("RESULT : ".print_r($result,true)."\n".print_r($requete_prepare->errorInfo(),true)); 
         }
     }
 }
