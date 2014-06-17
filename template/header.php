@@ -12,9 +12,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://tuxa.sme.utc/~nf17p110/css/bootstrap.css">
 
-    <link rel="stylesheet" href="http://tuxa.sme.utc/~nf17p110/css/custom_bootstrap.css">
-
     <link href="http://tuxa.sme.utc/~nf17p110/css/sticky-footer.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://tuxa.sme.utc/~nf17p110/css/custom_bootstrap.css">
 
     <!-- Optional theme -->
     <link rel="icon" type="image/png" href="http://tuxa.sme.utc/~nf17p110/img/logo.png" />
