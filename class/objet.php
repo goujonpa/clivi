@@ -24,6 +24,7 @@ class Objet
 
     public static function getAll()
     {
+        $className = get_called_class();
         $dbName = self::dbName();
         $bdd = new Db();
         $result = Array();
@@ -77,8 +78,8 @@ class Objet
         VALUES (".implode(",", array_values($values)).")";
 
         //debug
-        echo $req;
-        die();
+        //echo $req;
+        //die();
 
         $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
         $requete_prepare->execute($params);
