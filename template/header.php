@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Clinique vétérinaire">
     <meta name="author" content="nf17p110, Alexandre Cortyl, Paul Goujon, Matthieu Guffroy, Clement Mercier">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title>Clivi : The veto !</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="http://tuxa.sme.utc/~nf17p110/css/bootstrap.css">
 
     <!-- Optional theme -->
-    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="icon" type="image/png" href="http://tuxa.sme.utc/~nf17p110/img/logo.png" />
 
     <style>
     /* Sticky footer styles
