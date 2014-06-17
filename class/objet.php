@@ -101,7 +101,7 @@ class Objet
             if($keyName == "primaryAttr") { continue; }
             $params[$keyName] = $this->$keyName;
             if($keyName == $this->primaryAttr) { continue; }
-            $values[$keyName] = $keyName" = :".$keyName;
+            $values[$keyName] = $keyName." = :".$keyName;
         }
 
         $req = "UPDATE ".$dbName." SET ".implode(",", array_values($values)).") WHERE ".$this->primaryAttr." = :".$this->primaryAttr;
