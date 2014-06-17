@@ -35,8 +35,7 @@ class Objet
 
     public function getForm()
     {
-        $form = new Form();
-        $form->setObject($this);
+        $form = new Form($this);
         return $form;
     }
 
@@ -44,7 +43,7 @@ class Objet
     {
         $ret = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
-            $ret[] = new Field($keyName);
+            $ret[] = new Field($keyName, $this->$keyName);
         }
         return $ret;
     }
