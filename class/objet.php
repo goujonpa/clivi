@@ -43,7 +43,7 @@ class Objet
     {
         $ret = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
-            $ret[] = new Field($keyName);
+            $ret[] = new Field($keyName, $this->$keyName);
         }
         return $ret;
     }
