@@ -8,7 +8,9 @@ class Objet
         $attKeys = array_keys($att);
 
         for ($i=0; $i < count($att); $i++) {
-            $this->$attKeys[$i] = $arr[$attKeys[$i]];
+            if(array_key_exists($attKeys[$i], $arr)) {
+                $this->$attKeys[$i] = $arr[$attKeys[$i]];
+            }
         }
     }
 
@@ -36,5 +38,14 @@ class Objet
         $form = new Form();
         $form->setObject($this);
         return $form;
+    }
+
+    public function getFields()
+    {
+        $ret = array();
+        foreach(array_keys(get_object_vars($this)) as $keyName) {
+            $ret[] = new Field($keyName);
+        }
+        return $ret;
     }
 }

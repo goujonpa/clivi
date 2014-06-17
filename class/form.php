@@ -2,12 +2,10 @@
 
 class Form {
 	protected $object;
-	public function __construct() {
-
-	}
-
-	public function setObject(&$obj) {
+	public function __construct(&$obj) {
 		$this->object =& $obj;
+		$this->fields = $this->object->getFields();
+		// TODO: Check if there is $_POST data (and if yes, insert or update the corresponding row)
 	}
 
 	public function getTitle() {
@@ -19,7 +17,7 @@ class Form {
 	}
 
 	public function getFields() {
-		return Array();
+		return $this->fields();
 	}
 
 }
