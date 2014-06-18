@@ -5,6 +5,7 @@ class Field {
 	protected $value;
 	protected $primary;
 	public $label;
+	public $i;
 
 	public function __construct($name, &$value, $primary=false) {
 		$this->name = $name;
