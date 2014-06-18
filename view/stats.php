@@ -9,18 +9,26 @@
                 <th>Facture moyenne : </th>
                 <th><?php $tmp = $stats->factureMoy(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?></th>
         </thead>
-        <tbody>
-                <tr>
-                    <td>Nombre moyen d'animal par client : </td>
-                    <td><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?></td>
-                </tr>
-        </tbody>
+        <thead>
+                <th>Nombre moyen d'animal par client : </th>
+                <th><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?></th>
+        </thead>
       </table>
 
       <table class="table">
-            <caption> <th> Top 3 des plus gros client : </th> </caption>
         <thead>
-                <th><?php print_r($stats->top3Client()); ?></th>
+                <th>Nom </th>
+                <th>Prenom </th> 
+                <th>Total dépensé </th> 
         </thead>
-</table>
+          <tbody>
+          <?php foreach ($stats->top3Client() as $ligne): ?>
+            <tr>
+                <td><?php echo $ligne["nom"]; ?> </td>
+                <td><?php echo $ligne["prenom"]; ?> </td>
+                <td><?php echo $ligne["prix"]; ?> </td> 
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
 	</div>
