@@ -10,7 +10,8 @@ class ForeignField {
 		$this->name = $name;
 		$this->value =& $value;
 		$this->primary = $primary;
-		$this->choices = ucfirst($name)::getAll();
+		$cl = ucfirst($name);
+		$this->choices = $cl::getAll();
 	}
 
 	public function html($form) {
