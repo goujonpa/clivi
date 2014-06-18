@@ -5,8 +5,9 @@
     </div>
     <?php 
     $ok = true;
-    /*try { 
-        $test = $list->getLabels();
+    try { 
+        $test="toto";
+        //$test = $list->getLabels();
     } catch (Exception $e) { 
         echo $e->getMessage();
         $ok = false;
