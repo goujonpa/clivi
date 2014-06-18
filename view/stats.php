@@ -56,4 +56,25 @@
           <?php endforeach; ?>
         </tbody>
       </table>
+
+      <br/>
+      <hr/>
+      <h4>Nombre d'animaux par client</h4>
+      <table class="table">
+        <thead>
+                <th>Nom </th>
+                <th>Prenom </th> 
+                <th>Nombre d'animaux </th> 
+        </thead>
+          <tbody>
+          <?php foreach ($stats->nbAnimalClient() as $ligne): ?>
+            <tr>
+                <td><?php echo $ligne["nom"]; ?> </td>
+                <td><?php echo $ligne["prenom"]; ?> </td>
+                <td><?php echo $ligne["count"]; ?> </td> 
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
 	</div>

@@ -42,7 +42,7 @@ class Stats
                                                 GROUP BY c.nom, c.prenom, c.id" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
