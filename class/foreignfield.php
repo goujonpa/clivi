@@ -22,7 +22,7 @@ class ForeignField {
 		if($this->primary && $form->action == "Modifier") { $disabled = "disabled"; }
 
 		$html = '<div class="form-group">
-    <label for="form'.$this->name.'">'.ucfirst($this->name).'</label>
+    <label for="form'.$this->name.'">'.$this->label.'</label>
     <select class="form-control" name="'.$this->name.'">';
     	foreach ($this->choices as $value) {
     		if($this->value == $value->{$value->_primaryAttr}()) { $selected = "selected"; } else { $selected = ""; }

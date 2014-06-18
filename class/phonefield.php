@@ -5,7 +5,7 @@ class PhoneField extends Field
     public function html() {
         $html = '<div class = "form-group">
                     <label for = "form'.$this->name.'">
-                    <input type = "tel" name = "'.$this->name.'" value ="'.$this->value.'"> '.ucfirst($this->name).'
+                    <input type = "tel" name = "'.$this->name.'" value ="'.$this->value.'"> '.$this->label.'
                     </label>
                 </div>';
         return $html; 
