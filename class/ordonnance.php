@@ -8,11 +8,21 @@ class Ordonnance extends Objet
     protected $date;
     protected $prix;
     public $_specialFields = array(
-        "employe" => array(
-            "t" => "ForeignField"
+        "id" => array(
+            "i" => 1
+        ),
+        "date" => array(
+            "i" => 2
         ),
         "animal" => array(
+            "i" => 3
+        ),
+        "employe" => array(
+            "i" => 4,
             "t" => "ForeignField"
+        ),
+        "prix" => array(
+            "i" => 5
         ));
 
     public function id()
