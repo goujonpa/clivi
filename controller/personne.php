@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("listePersonnel", "listeClient", "addPersonnel", "addClient", "editPersonnel", "editClient");
+$actions = array("listePersonnel", "listeClient", "addPersonnel", "addClient", "editEmploye", "editClient");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
