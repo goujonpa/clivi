@@ -16,7 +16,7 @@ switch($action) {
 		$list = Ordonnance::getList("Liste des Ordonnances");
 		include 'view/list.php';
 		break;
-	case "addOrdonnanceOrdonnance":
+	case "addOrdonnance":
 		$ordonnance = new Ordonnance();
 		$formConf = $ordonnance->getForm();
 		include 'view/form.php';
