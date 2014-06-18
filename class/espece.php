@@ -2,7 +2,7 @@
 
 class Espece extends Objet
 {
-    protected $_primaryAttr = "nom";
+    public $_primaryAttr = "nom";
     protected $nom;
     protected $prix_consultation;
 
