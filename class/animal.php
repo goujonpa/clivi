@@ -9,8 +9,8 @@ class Animal extends Objet
     protected $poids;
     protected $genre;
     protected $sterile;
-    protected $dateNaissance;
-    protected $dateDeces;
+    protected $date_naissance;
+    protected $date_deces;
     protected $taille;
     protected $code;
 
@@ -84,24 +84,24 @@ class Animal extends Objet
         $this->sterile = $sterile;
     }
 
-    public function dateNaissance()
+    public function date_naissance()
     {
-        return $this->dateNaissance;
+        return $this->date_naissance;
     }
     
-    public function setDateNaissance($dateNaissance)
+    public function setDate_naissance($date_naissance)
     {
-        $this->dateNaissance = $dateNaissance;
+        $this->date_naissance = $date_naissance;
     }
 
-    public function dateDeces()
+    public function date_deces()
     {
-        return $this->dateDeces;
+        return $this->date_deces;
     }
     
-    public function setDateDeces($dateDeces)
+    public function setDate_deces($date_deces)
     {
-        $this->dateDeces = $dateDeces;
+        $this->date_deces = $date_deces;
     }
 
     public function taille()

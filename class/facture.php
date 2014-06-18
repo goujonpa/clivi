@@ -5,10 +5,10 @@ class Facture extends Objet
     protected $id;
     protected $employe;
     protected $animal;
-    protected $dateEdition;
-    protected $datePaiement;
-    protected $moyenPaiement;
-    protected $prixTotal;
+    protected $date_edition;
+    protected $date_paiement;
+    protected $moyen_paiement;
+    protected $prix_total;
 
     public function id()
     {
@@ -40,43 +40,43 @@ class Facture extends Objet
         $this->animal = $animal;
     }
 
-    public function dateEdition()
+    public function date_edition()
     {
-        return $this->dateEdition;
+        return $this->date_edition;
     }
     
-    public function setDateEdition($dateEdition)
+    public function setDate_edition($date_edition)
     {
-        $this->dateEdition = $dateEdition;
+        $this->date_edition = $date_edition;
     }
 
-    public function datePaiement()
+    public function date_paiement()
     {
-        return $this->datePaiement;
+        return $this->date_paiement;
     }
     
-    public function setDatePaiement($datePaiement)
+    public function setDate_paiement($date_paiement)
     {
-        $this->datePaiement = $datePaiement;
+        $this->date_paiement = $date_paiement;
     }
 
-    public function moyenPaiement()
+    public function moyen_paiement()
     {
-        return $this->moyenPaiement;
+        return $this->moyen_paiement;
     }
     
-    public function setMoyenPaiement($moyenPaiement)
+    public function setMoyen_paiement($moyen_paiement)
     {
-        $this->moyenPaiement = $moyenPaiement;
+        $this->moyen_paiement = $moyen_paiement;
     }
 
-    public function prixTotal()
+    public function prix_total()
     {
-        return $this->prixTotal;
+        return $this->prix_total;
     }
     
-    public function setPrixTotal($prixTotal)
+    public function setPrix_total($prix_total)
     {
-        $this->prixTotal = $prixTotal;
+        $this->prix_total = $prix_total;
     }
 }
