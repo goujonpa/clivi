@@ -3,6 +3,8 @@
       <div class="page-header">
         <h1>Statistiques</h1>
       </div>
+
+        <h4>Statistiques générales : </h4>
       <table class="table">
         <thead>
             
@@ -17,7 +19,7 @@
 
       <br/>
       <hr/>
-      <h3>Top 3 des meilleurs clients</h3>
+      <h4>Top 3 des meilleurs clients</h4>
       <table class="table">
         <thead>
                 <th>Nom </th>
