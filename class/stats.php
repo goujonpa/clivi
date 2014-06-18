@@ -6,7 +6,7 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT SUM(t.prix)/COUNT(*)
+        $requete_prepare = $bdd->db->prepare("  SELECT SUM(t.prix)/COUNT(*) AS value
                                                 FROM (  SELECT c.nom, c.prenom, SUM(f.prix_total) AS prix
                                                         FROM animal a, client c, facture f
                                                         WHERE a.client = c.id
@@ -23,7 +23,7 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT SUM(t.count)/COUNT(*)
+        $requete_prepare = $bdd->db->prepare("  SELECT SUM(t.count)/COUNT(*) AS value
                                                 FROM (  SELECT c.nom, c.prenom, COUNT(a.client) AS count
                                                         FROM animal a, client c 
                                                         WHERE a.client = c.id
