@@ -30,7 +30,7 @@ switch($action) {
         $formConf = $client->getForm();
         include 'view/form.php';
 		break;
-	case "editPersonnel":
+	case "editEmploye":
 		$employe = new Employe();
         $employe->select($_GET['id']);
 		$formConf = $employe->getForm();
