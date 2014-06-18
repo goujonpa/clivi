@@ -24,8 +24,8 @@ class Employe extends Personne
         return $this->is_veterinaire;
     }
     
-    public function setIs_veterinaire($isVeterinaire)
+    public function setIs_veterinaire($is_veterinaire)
     {
-        $this->is_veterinaire = $isVeterinaire;
+        $this->is_veterinaire = $is_veterinaire;
     }
 }

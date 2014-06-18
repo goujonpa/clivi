@@ -3,7 +3,7 @@
 class Espece extends Objet
 {
     protected $nom;
-    protected $prixConsult;
+    protected $prix_consult;
 
     public function nom()
     {
@@ -15,13 +15,13 @@ class Espece extends Objet
         $this->nom = $nom;
     }
 
-    public function prixConsult()
+    public function prix_consult()
     {
-        return $this->prixConsult;
+        return $this->prix_consult;
     }
     
-    public function setPrixConsult($prixConsult)
+    public function setPrix_consult($prix_consult)
     {
-        $this->prixConsult = $prixConsult;
+        $this->prix_consult = $prix_consult;
     }
 }

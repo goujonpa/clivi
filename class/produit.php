@@ -5,7 +5,7 @@ class Produit extends Objet
     protected $id;
     protected $nom;
     protected $prix;
-    protected $isMedicament;
+    protected $is_medicament;
     
     public function id()
     {
@@ -37,13 +37,13 @@ class Produit extends Objet
         $this->prix = $prix;
     }
 
-    public function isMedicament()
+    public function is_medicament()
     {
-        return $this->isMedicament;
+        return $this->is_medicament;
     }
     
-    public function setIsMedicament($isMedicament)
+    public function setis_medicament($is_medicament)
     {
-        $this->isMedicament = $isMedicament;
+        $this->is_medicament = $is_medicament;
     }
 }

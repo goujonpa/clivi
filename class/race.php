@@ -4,7 +4,7 @@ class Race extends Objet
 {
     protected $nom;
     protected $espece;
-    protected $prixIntervention;
+    protected $prix_intervention;
 
     public function nom()
     {
@@ -26,13 +26,13 @@ class Race extends Objet
         $this->espece = $espece;
     }
 
-    public function prixIntervention()
+    public function prix_intervention()
     {
-        return $this->prixIntervention;
+        return $this->prix_intervention;
     }
     
-    public function setPrixIntervention($prixIntervention)
+    public function setPrix_intervention($prix_intervention)
     {
-        $this->prixIntervention = $prixIntervention;
+        $this->prix_intervention = $prix_intervention;
     }
 }
