@@ -19,9 +19,9 @@ class Field {
 		if($this->primary && $form->action == "Modifier") { $disabled = "disabled"; }
 
 		return '<div class="form-group">
-    <label for="form'.$this->name.'">'.ucfirst($this->name).'</label>
-    <input type="text" class="form-control" name="'.$this->name.'" value="'.$this->value.'" '.$disabled.'>
-  </div>';
+    				<label for="form'.$this->name.'">'.ucfirst($this->name).'</label>
+    				<input type="text" class="form-control" name="'.$this->name.'" value="'.$this->value.'" '.$disabled.'>
+  				</div>';
 	}
 
 	/*
@@ -29,6 +29,7 @@ class Field {
 		and return false, if data is not valid !
 	*/
 	public function validate() {
+
 		// On ne peut pas changer la valeur de la clef primaire
 		if($this->primary && $this->value) {
 			return true;
