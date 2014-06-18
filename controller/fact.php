@@ -22,6 +22,7 @@ switch($action) {
 		include 'view/form.php';
 		break;
 	case "detailFacture":
+		$list = Facture::getList("Liste des Factures");
 		$facture = new Facture();
         $facture->select($_GET['id']);
         $formConf = $facture->getForm();
