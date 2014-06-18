@@ -11,8 +11,8 @@
         </thead>
         <tbody>
                 <tr>
+                    <td>Nombre moyen d'animal par client : </td>
                     <td><?php $tmp = $stats->nbAnimalMoyClient(); echo $tmp["value"]; ?></td>
-                    <td>l2</td>
                 </tr>
         </tbody>
       </table>
