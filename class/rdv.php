@@ -15,14 +15,13 @@ class Rdv extends Objet
         "animal" => array(
             "t" => "ForeignField",
             "i" => 3
-        )
+        ),
         "id" => array(
             "i" => 1
-        )
+        ),
         "date" => array(
             "i" => 4
-        )
-        
+        ),        
         "duree" => array(
             "i" => 5
         ));

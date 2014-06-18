@@ -10,14 +10,14 @@ class Race extends Objet
         "espece" => array(
             "t" => "ForeignField",
             "i" => 3
-        )
+        ),
         "nom" => array(
             "t" => "ForeignField",
             "i" => 2
-        )
+        ),
         "id" => array(
             "i" => 1
-        )
+        ),
         "prix_intervention" => array(
             "label" => "Prix de l'intervetion",
             "i" => 4
