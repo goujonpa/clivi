@@ -12,7 +12,7 @@ if(!in_array($action, $actions)) {
 }
 
 switch($action) {
-	case "liste":
+	case "listeAnimal":
 		$listArray = Animal::getAll();
 		$listParams = array("title" => "Liste des animaux de la clinique",
 							"keys" => array("id", "nom", "proprio", "race", "poids", "genre", "sterile", "date_naissance", "date_deces", "taille", "code"));
@@ -24,7 +24,7 @@ switch($action) {
 		$formConf = $animal->getForm();
 		include 'view/form.php';
 		break;
-	case "edit":
+	case "editAnimal":
 		$animal = new Animal();
         $animal->select($_GET['id']);
         $formConf = $animal->getForm();

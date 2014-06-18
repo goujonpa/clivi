@@ -31,19 +31,19 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "listeProduit":
-		$listArray = Ordonnance::getAll();
+		$listArray = Produit::getAll();
 		$listParams = array("title" => "Liste des ordonnances",
 							"keys" => array("id", "nom", "prix", "is_medicament"));
 		$editLink = "editProduit";
 		include 'view/list.php';
 		break;
 	case "addProduit":
-		$ordonnance = new Ordonnance();
+		$ordonnance = new Produit();
 		$formConf = $ordonnance->getForm();
 		include 'view/form.php';
 		break;
 	case "editProduit":
-		$produit = new Ordonnance();
+		$produit = new Produit();
         $produit->select($_GET['id']);
         $formConf = $produit->getForm();
         include 'view/form.php';
