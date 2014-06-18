@@ -22,7 +22,18 @@ class PhoneField extends Field
                     $this->value = $_POST[$this->name];
                     return true;
                 }
+        }
         return false;
     }
 
+    public function show() {
+        $num = $this->value;
+        $html = "";
+        $html .= substr($num, 0, 2);
+        for($i = 1; $i < 5; $i++) {
+            $html .= ".";
+            $html .= substr($num, 2*$i, 2);
+        }
+        return $html;
+    }
 }
