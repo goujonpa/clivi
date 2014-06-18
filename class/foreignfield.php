@@ -25,7 +25,7 @@ class ForeignField {
     <label for="form'.$this->name.'">'.ucfirst($this->name).'</label>
     <select class="form-control" name="'.$this->name.'">';
     	foreach ($this->choices as $value) {
-    		if($this->value == $value->{$value->$_primaryAttr}()) { $selected = "selected" } else { $selected = "" }
+    		if($this->value == $value->{$value->$_primaryAttr}()) { $selected = "selected"; } else { $selected = ""; }
     		$html .= "<option value=".$value->{$value->$_primaryAttr}()." ".$selected." >".$value->str()."</option>";
     	}
 
