@@ -13,6 +13,10 @@ class Animal extends Objet
     protected $date_deces;
     protected $taille;
     protected $code;
+    public $_specialFields = array(
+        "sterile" => array(
+            "t" => "BoolField"
+        ));
 
     public function id()
     {
