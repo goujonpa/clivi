@@ -2,6 +2,7 @@
 
 class Race extends Objet
 {
+    protected $_primaryAttr = "nom";
     protected $nom;
     protected $espece;
     protected $prix_intervention;
