@@ -6,7 +6,7 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT SUM(f.prix_total)/COUNT(*)
+        $requete_prepare = $bdd->db->prepare("  SELECT SUM(f.prix_total)/COUNT(*) AS value
                                                 FROM facture f" ); // on prépare notre requête
         $requete_prepare->execute();
 
