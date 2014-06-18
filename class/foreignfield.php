@@ -5,6 +5,7 @@ class ForeignField {
 	protected $value;
 	protected $primary;
 	protected $choices;
+	public $label;
 
 	public function __construct($name, &$value, $primary=false) {
 		$this->name = $name;
@@ -12,6 +13,7 @@ class ForeignField {
 		$this->primary = $primary;
 		$cl = ucfirst($name);
 		$this->choices = $cl::getAll();
+		$label = ucfirst($name);
 	}
 
 	public function html($form) {
