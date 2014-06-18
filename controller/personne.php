@@ -29,6 +29,8 @@ switch($action) {
 	case "addPersonnel":
 		$employe = new Employe();
 		$formConf = $employe->getForm();
+		print_r($employe->_specialFields);
+		die();
 		include 'view/form.php';
 		break;
 	case "addClient":
