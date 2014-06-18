@@ -16,12 +16,7 @@ switch($action) {
 		$listArray = Facture::getAll();
 		$listParams = array("title" => "Liste des factures",
 							"keys" => array("id", "employe", "animal", "date_edition", "date_paiement", "moyen_paiement", "prix_total"));
-		include 'view/list.php';
-		break;
-		case "listePersonnel":
-		$listArray = Employe::getAll();
-		$listParams = array("title" => "Liste du personnel",
-							"keys" => array("id", "nom", "prenom", "is_veterinaire", "id_national"));
+		$editLink = "edit";
 		include 'view/list.php';
 		break;
 	case "add":
@@ -30,7 +25,10 @@ switch($action) {
 		include 'view/form.php';
 		break;
 	case "edit":
-
+		$facture = new Facture();
+        $facture->select($_GET['id']);
+        $formConf = $facture->getForm();
+        include 'view/form.php';
 		break;
 	default:
 		include 'view/404.php';
