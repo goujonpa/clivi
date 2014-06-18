@@ -3,14 +3,21 @@
 class List
 {
     protected $title;
-    protected $class;
+    protected $objArray;
 
 
     public function __construct($class, $title)
     {
-        $this->$class = $class;
-        $this->$title = $title;
+        $this->title = $title;
+        $this->$objArray = $class::getAll();
     }
 
+    public function getTitle() {
+        return $this->title;
+    }
+
+    public function getLines() {
+        return $this->objArray;
+    }
 
 }

@@ -13,17 +13,11 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "listePersonnel":
-		$listArray = Employe::getAll();
-		$listParams = array("title" => "Liste du personnel",
-							"keys" => array("id", "nom", "prenom", "is_veterinaire", "id_national"));
-		$editLink = "editPersonnel";
+		$list = Employe::getList("Liste du Personnel");
 		include 'view/list.php';
 		break;
 	case "listeClient":
-		$listArray = Client::getAll();
-		$listParams = array("title" => "Liste des clients",
-							"keys" => array("id", "nom", "prenom", "num_tel"));
-		$editLink = "editClient";
+		$list = Client::getList("Liste des Clients");
 		include 'view/list.php';
 		break;
 	case "addPersonnel":

@@ -21,5 +21,14 @@ class BoolField extends Field
         }
         return true;
     }
+
+    public function show() {
+        if ($this->value == true) {
+            return 'Oui';
+        }
+        else {
+            return 'Non';
+        }
+    }
 }
 
