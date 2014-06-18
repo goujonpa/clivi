@@ -36,7 +36,6 @@
         height: 30px;
         background-color: #108a93;
         text-align: center;
-
     }
 
 
