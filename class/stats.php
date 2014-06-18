@@ -2,16 +2,12 @@
 
 class Stats
 {    
-    public function factureMoyClient()
+    public function factureMoy()
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT SUM(t.prix)/COUNT(*) AS value
-                                                FROM (  SELECT c.nom, c.prenom, SUM(f.prix_total) AS prix
-                                                        FROM animal a, client c, facture f
-                                                        WHERE a.client = c.id
-                                                        AND f.animal = a.id
-                                                        GROUP BY c.nom, c.prenom, c.id) t" ); // on prépare notre requête
+        $requete_prepare = $bdd->db->prepare("  SELECT SUM(f.prix_total)/COUNT(*)
+                                                FROM facture f" ); // on prépare notre requête
         $requete_prepare->execute();
 
         $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
