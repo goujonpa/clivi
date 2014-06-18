@@ -20,4 +20,12 @@ class ListView
         return $this->objArray;
     }
 
+    public function getLabels() {
+        if(count($this->objArray) > 0 ){
+            return $this->objArray[0];
+        } else {
+            throw new Exception("Liste vide");
+        }
+    }
+
 }

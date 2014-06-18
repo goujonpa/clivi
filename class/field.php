@@ -43,4 +43,8 @@ class Field {
 		return $this->value;
 	}
 
+	public function getLabel() {
+		return $name;
+	}
+
 }
