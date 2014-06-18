@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("liste", "add", "edit");
+$actions = array("liste", "add", "edit", "listeProduit", "addProduit", "editProduit");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
@@ -16,6 +16,7 @@ switch($action) {
 		$listArray = Ordonnance::getAll();
 		$listParams = array("title" => "Liste des ordonnances",
 							"keys" => array("id", "animal", "veterinaire", "date", "prix"));
+		$editLink = "edit";
 		include 'view/list.php';
 		break;
 	case "add":
@@ -24,7 +25,28 @@ switch($action) {
 		include 'view/form.php';
 		break;
 	case "edit":
-
+		$ordonnance = new Ordonnance();
+        $ordonnance->select($_GET['id']);
+        $formConf = $ordonnance->getForm();
+        include 'view/form.php';
+		break;
+	case "listeProduit":
+		$listArray = Ordonnance::getAll();
+		$listParams = array("title" => "Liste des ordonnances",
+							"keys" => array("id", "nom", "prix", "is_medicament"));
+		$editLink = "editProduit";
+		include 'view/list.php';
+		break;
+	case "addProduit":
+		$ordonnance = new Ordonnance();
+		$formConf = $ordonnance->getForm();
+		include 'view/form.php';
+		break;
+	case "editProduit":
+		$produit = new Ordonnance();
+        $produit->select($_GET['id']);
+        $formConf = $produit->getForm();
+        include 'view/form.php';
 		break;
 	default:
 		include 'view/404.php';
