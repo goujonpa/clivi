@@ -29,7 +29,7 @@ class PhoneField extends Field
     public function show() {
         $num = $this->value;
         $html = "";
-        for($i = 0; i < 5; i++) {
+        for($i = 0; $i < 5; $i++) {
             $html += substr($num, 2*$i, 2);
             $html += ".";
         }
