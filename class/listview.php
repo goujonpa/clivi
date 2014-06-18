@@ -1,6 +1,6 @@
 <?php
 
-class List
+class ListView
 {
     protected $title;
     protected $objArray;
