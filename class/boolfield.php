@@ -6,7 +6,7 @@ class BoolField extends Field
 
     public function html($form) {
         if($this->value) { $checked="checked"; } else { $checked = false; }
-        $html = '<div class="checkbox"> <label> <input type="checkbox" name="'.$this->name.'" '.$checked.'>'.ucfirst($this->name).'</label> </div>';
+        $html = '<div class="checkbox"> <label> <input type="checkbox" name="'.$this->name.'" '.$checked.'>'.$this->label.'</label> </div>';
         return $html; 
     }
 
