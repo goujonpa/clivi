@@ -15,6 +15,20 @@ class Facture extends Objet
         ),
         "animal" => array(
             "t" => "ForeignField"
+        ),
+        "date_edition" => array(
+            "label" => "Date d'édition"
+        ),
+        "date_paiement" => array(
+            "label" => "Date de paiement",
+            "i" => -1
+        ),
+        "moyen_paiement" => array(
+            "label" => "Moyen de paiement",
+            "i" => -1
+        ),
+        "prix_total" => array(
+            "label" => "Prix total"
         ));
 
     public function id()
