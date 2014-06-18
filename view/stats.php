@@ -12,7 +12,7 @@
         <tbody>
                 <tr>
                     <td>Nombre moyen d'animal par client : </td>
-                    <td><?php $tmp = $stats->nbAnimalMoyClient(); echo $tmp["value"]; ?></td>
+                    <td><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp, 2, ',', ' '); echo $nb_formated["value"]; ?></td>
                 </tr>
         </tbody>
       </table>
