@@ -9,10 +9,22 @@ class Rdv extends Objet
     protected $duree;
     public $_specialFields = array(
         "employe" => array(
-            "t" => "ForeignField"
+            "t" => "ForeignField",
+            "i" => 2
         ),
         "animal" => array(
-            "t" => "ForeignField"
+            "t" => "ForeignField",
+            "i" => 3
+        )
+        "id" => array(
+            "i" => 1
+        )
+        "date" => array(
+            "i" => 4
+        )
+        
+        "duree" => array(
+            "i" => 5
         ));
 
 
