@@ -140,4 +140,8 @@ class Objet
     public function str() {
         return self::dbName()." #".$this->{$this->_primaryAttr};
     }
+
+    public function getList($title) {
+        return new List(get_called_class(), $title);
+    }
 }

@@ -39,4 +39,8 @@ class Field {
 		return true;
 	}
 
+	public function show() {
+		return $this->value;
+	}
+
 }

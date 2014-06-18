@@ -1,22 +1,21 @@
 <!-- Begin page content -->
 <div class="container">
     <div class="page-header">
-        <h1><?php echo $listParams["title"]; ?></h1>
+        <h1><?php echo $list->getTitle(); ?></h1>
     </div>
     <table class="table">
         <thead>
-            <?php foreach($listParams["keys"] as $key): ?>
+            <?php foreach($list->getLabels() as $key): ?>
                 <th><?php echo ucfirst($key); ?></th>
             <?php endforeach; ?>
                 <th></th>
         </thead>
         <tbody>
-            <?php foreach($listArray as $line): ?>
-                <tr>
-                <?php foreach($listParams["keys"] as $key): ?>
-                    <td><?php echo $line->{$key}(); ?></td>
-                <?php endforeach; ?>
-                    <td> <a type="button" class="btn btn-primary" href="<?php echo $base_url.$page.'/'.$editLink.'?'.$listParams['keys'][0].'='.$line->{$listParams['keys'][0]}() ?>">Editer</a>
+            <?php foreach($list->getLines() as $line): ?>
+                <tr>  
+                    <?php foreach($line->getFields() as $field): ?>
+                        <td><?php echo $field->show(); ?></td>
+                    <?php endforeach; ?>
                 </tr>
             <?php endforeach; ?>
         </tbody>
