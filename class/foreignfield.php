@@ -13,7 +13,7 @@ class ForeignField {
 		$this->primary = $primary;
 		$cl = ucfirst($name);
 		$this->choices = $cl::getAll();
-		$label = ucfirst($name);
+		$this->label = ucfirst($name);
 	}
 
 	public function html($form) {
