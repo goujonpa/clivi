@@ -52,13 +52,18 @@ class Objet
     {
         $ret = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
+            $field = null;
             if($keyName[0] == "_") { continue; }
             if($keyName == $this->_primaryAttr && $this->_primaryAttr == "id") { $ret[] = new Field($keyName, $this->$keyName, true); continue; }
-            if(in_array($keyName, array_keys($this->_specialFields))) {
-                $ret[] = new $this->_specialFields[$keyName]["t"]($keyName, $this->$keyName);
+            if(isset($this->_specialFields[$keyName]["t"])) {
+                $field = new $this->_specialFields[$keyName]["t"]($keyName, $this->$keyName);
             } else {
-                $ret[] = new Field($keyName, $this->$keyName);
+                $field = new Field($keyName, $this->$keyName);
             }
+            if(isset($this->_specialFields[$keyName]["label"])) {
+                $field->label = $this->_specialFields[$keyName]["label"];
+            }
+            $ret[] = $field;
         }
         return $ret;
     }

@@ -4,11 +4,13 @@ class Field {
 	protected $name;
 	protected $value;
 	protected $primary;
+	public $label;
 
 	public function __construct($name, &$value, $primary=false) {
 		$this->name = $name;
 		$this->value =& $value;
 		$this->primary = $primary;
+		$this->label = ucfirst($name);
 	}
 
 	public function html($form) {
@@ -44,7 +46,7 @@ class Field {
 	}
 
 	public function getLabel() {
-		return ucfirst($this->name);
+		return $this->label;
 	}
 
 }
