@@ -15,6 +15,9 @@
         </thead>
       </table>
 
+      <br/>
+      <hr/>
+      <h2>Top 3 des meilleurs clients</h2>
       <table class="table">
         <thead>
                 <th>Nom </th>
