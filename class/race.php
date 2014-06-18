@@ -8,7 +8,19 @@ class Race extends Objet
     protected $prix_intervention;
     public $_specialFields = array(
         "espece" => array(
-            "t" => "ForeignField"
+            "t" => "ForeignField",
+            "i" => 3
+        )
+        "nom" => array(
+            "t" => "ForeignField",
+            "i" => 2
+        )
+        "id" => array(
+            "i" => 1
+        )
+        "prix_intervention" => array(
+            "label" => "Prix de l'intervetion",
+            "i" => 4
         ));
 
     public function id()

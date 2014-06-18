@@ -27,10 +27,12 @@ class Animal extends Objet
             "i" => 6
         ),
         "date_naissance" => array(
-            "i" => 8
+            "i" => 8,
+            "label" => "Date de naissance"
         ),
         "date_deces" => array(
-            "i" => 9
+            "i" => 9,
+            "label" => "Date de deces"
         ),
         "sterile" => array(
             "t" => "BoolField",
