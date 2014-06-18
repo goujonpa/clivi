@@ -133,4 +133,8 @@ class Animal extends Objet
     {
         $this->code = $code;
     }
+
+    public function str() {
+        return $this->nom;
+    }
 }
