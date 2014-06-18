@@ -2,7 +2,7 @@
 
 class Form {
 	protected $object;
-	protected $action;
+	public $action;
 	protected $error = null;
 
 	public function __construct(&$obj) {
@@ -10,7 +10,7 @@ class Form {
 		$this->fields = $this->object->getFields();
 
 		// Update or Insert
-		if($this->object->{$this->object->primaryAttr}()) {
+		if($this->object->{$this->object->_primaryAttr}()) {
 			$this->action = "Modifier";
 		} else {
 			$this->action = "Ajouter";
@@ -32,6 +32,7 @@ class Form {
 						$this->object->update();
 					} else {
 						$this->object->insert();
+						$this->action = "Modifier";
 					}
 				} catch (Exception $e) {
 					$this->error = $e->getMessage();

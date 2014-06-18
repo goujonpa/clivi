@@ -3,10 +3,17 @@
 class Rdv extends Objet
 {
     protected $id;
-    protected $veterinaire;
+    protected $employe;
     protected $animal;
     protected $date;
     protected $duree;
+    public $_specialFields = array(
+        "employe" => array(
+            "t" => "ForeignField"
+        ),
+        "animal" => array(
+            "t" => "ForeignField"
+        ));
 
 
     public function id()
@@ -20,14 +27,14 @@ class Rdv extends Objet
     }
 
     
-    public function veterinaire()
+    public function employe()
     {
-        return $this->veterinaire;
+        return $this->employe;
     }
     
-    public function setVeterinaire($veterinaire)
+    public function setEmploye($employe)
     {
-        $this->veterinaire = $veterinaire;
+        $this->employe = $employe;
     }
 
     public function animal()

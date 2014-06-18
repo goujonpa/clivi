@@ -2,7 +2,8 @@
 
 class Objet
 {
-    public $primaryAttr = "id";
+    public $_primaryAttr = "id";
+    public $_specialFields = array();
 
     public function fromDb($arr)
     {
@@ -51,8 +52,13 @@ class Objet
     {
         $ret = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
-            if($keyName == "primaryAttr") { continue; }
-            $ret[] = new Field($keyName, $this->$keyName);
+            if($keyName[0] == "_") { continue; }
+            if($keyName == $this->_primaryAttr && $this->_primaryAttr == "id") { $ret[] = new Field($keyName, $this->$keyName, true); continue; }
+            if(in_array($keyName, array_keys($this->_specialFields))) {
+                $ret[] = new $this->_specialFields[$keyName]["t"]($keyName, $this->$keyName);
+            } else {
+                $ret[] = new Field($keyName, $this->$keyName);
+            }
         }
         return $ret;
     }
@@ -65,10 +71,11 @@ class Objet
         $values = array();
         $params = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
-            if($keyName == "primaryAttr") { continue; }
-            if($keyName == $this->primaryAttr) { 
+            if($keyName[0] == "_") { continue; }
+            if($keyName == $this->_primaryAttr && $this->_primaryAttr == "id") {
                 $values[$keyName] = "nextval('".$dbName."_id_seq'::regclass)";
                 continue;
+                
             }
             $values[$keyName] = ":".$keyName;
             $params[$keyName] = $this->$keyName;
@@ -98,13 +105,13 @@ class Objet
         $values = array();
         $params = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
-            if($keyName == "primaryAttr") { continue; }
+            if($keyName[0] == "_") { continue; }
             $params[$keyName] = $this->$keyName;
-            if($keyName == $this->primaryAttr) { continue; }
+            if($keyName == $this->_primaryAttr && $this->_primaryAttr == "id") { continue; }
             $values[$keyName] = $keyName." = :".$keyName;
         }
 
-        $req = "UPDATE ".$dbName." SET ".implode(",", array_values($values))." WHERE ".$this->primaryAttr." = :".$this->primaryAttr;
+        $req = "UPDATE ".$dbName." SET ".implode(",", array_values($values))." WHERE ".$this->_primaryAttr." = :".$this->_primaryAttr;
 
         $requete_prepare = $bdd->db->prepare($req); // on prépare notre requête
 
@@ -123,10 +130,14 @@ class Objet
         $dbName = self::dbName();
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE ".$this->primaryAttr." = :id"); // on prépare notre requête
+        $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE ".$this->_primaryAttr." = :id"); // on prépare notre requête
         $requete_prepare->execute(array("id" => $id));
 
         $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
         $this->fromDb($ligne);
+    }
+
+    public function str() {
+        return self::dbName()." #".$this->{$this->_primaryAttr};
     }
 }

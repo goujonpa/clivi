@@ -2,9 +2,24 @@
 
 class Race extends Objet
 {
+    protected $id;
     protected $nom;
     protected $espece;
-    protected $prixIntervention;
+    protected $prix_intervention;
+    public $_specialFields = array(
+        "espece" => array(
+            "t" => "ForeignField"
+        ));
+
+    public function id()
+    {
+        return $this->id;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function nom()
     {
@@ -26,13 +41,13 @@ class Race extends Objet
         $this->espece = $espece;
     }
 
-    public function prixIntervention()
+    public function prix_intervention()
     {
-        return $this->prixIntervention;
+        return $this->prix_intervention;
     }
     
-    public function setPrixIntervention($prixIntervention)
+    public function setPrix_intervention($prix_intervention)
     {
-        $this->prixIntervention = $prixIntervention;
+        $this->prix_intervention = $prix_intervention;
     }
 }

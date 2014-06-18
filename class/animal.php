@@ -4,15 +4,25 @@ class Animal extends Objet
 {
     protected $id;
     protected $nom;
-    protected $proprio;
+    protected $client;
     protected $race;
     protected $poids;
     protected $genre;
     protected $sterile;
-    protected $dateNaissance;
-    protected $dateDeces;
+    protected $date_naissance;
+    protected $date_deces;
     protected $taille;
     protected $code;
+    public $_specialFields = array(
+        "sterile" => array(
+            "t" => "BoolField"
+        ),
+        "client" => array(
+            "t" => "ForeignField"
+        ),
+        "race" => array(
+            "t" => "ForeignField"
+        ));
 
     public function id()
     {
@@ -34,14 +44,14 @@ class Animal extends Objet
         $this->nom = $nom;
     }
 
-    public function proprio()
+    public function client()
     {
-        return $this->proprio;
+        return $this->client;
     }
     
-    public function setProprio($proprio)
+    public function setClient($client)
     {
-        $this->proprio = $proprio;
+        $this->client = $client;
     }
 
     public function race()
@@ -84,24 +94,24 @@ class Animal extends Objet
         $this->sterile = $sterile;
     }
 
-    public function dateNaissance()
+    public function date_naissance()
     {
-        return $this->dateNaissance;
+        return $this->date_naissance;
     }
     
-    public function setDateNaissance($dateNaissance)
+    public function setDate_naissance($date_naissance)
     {
-        $this->dateNaissance = $dateNaissance;
+        $this->date_naissance = $date_naissance;
     }
 
-    public function dateDeces()
+    public function date_deces()
     {
-        return $this->dateDeces;
+        return $this->date_deces;
     }
     
-    public function setDateDeces($dateDeces)
+    public function setDate_deces($date_deces)
     {
-        $this->dateDeces = $dateDeces;
+        $this->date_deces = $date_deces;
     }
 
     public function taille()
@@ -122,5 +132,9 @@ class Animal extends Objet
     public function setCode($code)
     {
         $this->code = $code;
+    }
+
+    public function str() {
+        return $this->nom;
     }
 }

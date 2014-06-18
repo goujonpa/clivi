@@ -3,7 +3,7 @@
 class LigneOrdonnance extends Objet
 {
     protected $ordonnance;
-    protected $medicament;
+    protected $produit;
     protected $quantite;
     protected $instruction;
 
@@ -17,14 +17,14 @@ class LigneOrdonnance extends Objet
         $this->ordonnance = $ordonnance;
     }
 
-    public function medicament()
+    public function produit()
     {
-        return $this->medicament;
+        return $this->produit;
     }
     
-    public function setMedicament($medicament)
+    public function setProduit($produit)
     {
-        $this->medicament = $medicament;
+        $this->produit = $produit;
     }
 
     public function quantite()
