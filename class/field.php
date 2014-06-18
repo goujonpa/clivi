@@ -44,7 +44,7 @@ class Field {
 	}
 
 	public function getLabel() {
-		return $name;
+		return ucfirst($this->name);
 	}
 
 }
