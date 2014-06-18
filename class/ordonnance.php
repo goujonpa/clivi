@@ -3,12 +3,12 @@
 class Ordonnance extends Objet
 {
     protected $id;
-    protected $veterinaire;
+    protected $employe;
     protected $animal;
     protected $date;
     protected $prix;
     public $_specialFields = array(
-        "veterinaire" => array(
+        "employe" => array(
             "t" => "ForeignField"
         ),
         "animal" => array(
@@ -35,14 +35,14 @@ class Ordonnance extends Objet
         $this->date = $date;
     }
 
-    public function veterinaire()
+    public function employe()
     {
-        return $this->veterinaire;
+        return $this->employe;
     }
     
-    public function setVeterinaire($veterinaire)
+    public function setEmploye($employe)
     {
-        $this->veterinaire = $veterinaire;
+        $this->employe = $employe;
     }
 
     public function animal()
