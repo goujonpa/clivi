@@ -3,6 +3,7 @@
     <div class="page-header">
         <h1><?php echo $list->getTitle(); ?></h1>
     </div>
+    <?php try { ?>
     <table class="table">
         <thead>
             <?php foreach($list->getLabels() as $field): ?>
@@ -21,4 +22,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <?php } catch(Exception $e) { 
+        echo $e->getMessage();
+    } ?>
 </div>
