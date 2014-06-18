@@ -55,7 +55,7 @@
                     <li class="dropdown<?php if($page == "ord") { echo " active"; }?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordonnances<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-header">Ordonnances</li>
+                            <li class="dropdown-header">Ordonnance</li>
                             <li><a href="<?php echo $base_url; ?>ord/liste">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>ord/add">Ajouter</a></li>
                             <li class="divider"></li>
