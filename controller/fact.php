@@ -27,6 +27,9 @@ switch($action) {
         $facture->select($_GET['id']);
         $formConf = $facture->getForm();
         include 'view/formDetail.php';
+
+        $list = LigneFacture::getList("Détail de la facture", $_GET["id"]);
+        include 'view/list.php';
 		break;
 	default:
 		include 'view/404.php';
