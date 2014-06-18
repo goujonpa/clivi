@@ -9,7 +9,6 @@ class Employe extends Personne
             "t" => "BoolField",
             "label" => "Veterinaire",
             "i" => 9
-
         ),
         "id_national" => array(
             "label" => "Identifiant national",
