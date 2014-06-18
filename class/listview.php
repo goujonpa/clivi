@@ -22,7 +22,7 @@ class ListView
 
     public function getLabels() {
         if(count($this->objArray) > 0 ){
-            return $this->objArray[0];
+            return $this->objArray[0]->getFields();
         } else {
             throw new Exception("Liste vide");
         }
