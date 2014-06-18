@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("liste", "add", "edit");
+$actions = array("listeFacture", "addFacture", "editFacture", "detailFacture");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
@@ -12,20 +12,26 @@ if(!in_array($action, $actions)) {
 }
 
 switch($action) {
-	case "liste":
+	case "listeFacture":
 		$list = Facture::getList("Liste des Factures");
-		include 'view/list.php';
+		include 'view/detail.php';
 		break;
-	case "add":
+	case "addFacture":
 		$facture = new Facture();
 		$formConf = $facture->getForm();
 		include 'view/form.php';
 		break;
-	case "edit":
+	case "editFacture":
 		$facture = new Facture();
         $facture->select($_GET['id']);
         $formConf = $facture->getForm();
         include 'view/form.php';
+		break;
+	case "detailFacture":
+		$facture = new Facture();
+        $facture->select($_GET['id']);
+        $formConf = $facture->getForm();
+        include 'view/detail.php';
 		break;
 	default:
 		include 'view/404.php';
