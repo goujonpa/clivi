@@ -11,6 +11,7 @@ class BoolField extends Field
                     <input type = "checkbox" name = "'.$this->name.'" value ="'.$this->value.'" '.$checked.'> '.ucfirst($this->name).'
                     </label>
                 </div>';
+        return $html;
     }
 
     public function validate()
