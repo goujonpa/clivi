@@ -43,15 +43,25 @@
                     <li class="dropdown<?php if($page == "rdv") { echo " active"; }?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rendez-vous<b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li class="dropdown-header">Rendez-vous</li>
                             <li><a href="<?php echo $base_url; ?>rdv/liste">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>rdv/add">Ajouter</a></li>
+                            <li><a class="divider"></li>
+                            <li class="dropdown-header">Prestation</li>
+                            <li><a href="<?php echo $base_url; ?>rdv/listePrestation">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>rdv/addPrestation">Ajouter</a></li>
                         </ul>
                     </li>
                     <li class="dropdown<?php if($page == "ord") { echo " active"; }?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordonnances<b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li class="dropdown-header">Ordonnances</li>
                             <li><a href="<?php echo $base_url; ?>ord/liste">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>ord/add">Ajouter</a></li>
+                            <li><a class="divider"></li>
+                            <li class="dropdown-header">Produit</li>
+                            <li><a href="<?php echo $base_url; ?>ord/listeProduit">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>ord/addProduit">Ajouter</a></li>
                         </ul>
                     </li>
                     <li class="dropdown<?php if($page == "fact") { echo " active"; }?>">
