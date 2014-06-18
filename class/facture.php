@@ -17,7 +17,8 @@ class Facture extends Objet
             "t" => "ForeignField"
         ),
         "date_edition" => array(
-            "label" => "Date d'édition"
+            "label" => "Date d'édition",
+            "i" => 8
         ),
         "date_paiement" => array(
             "label" => "Date de paiement",
@@ -28,7 +29,8 @@ class Facture extends Objet
             "i" => -1
         ),
         "prix_total" => array(
-            "label" => "Prix total"
+            "label" => "Prix total",
+            "i" => 9
         ));
 
     public function id()
