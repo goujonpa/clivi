@@ -14,10 +14,10 @@ class BoolField extends Field
     {
         if (isset($_POST[$this->name])) 
         {
-            $this->value = true;
+            $this->value = 1;
         }
         else {
-            $this->value = false;
+            $this->value = 0;
         }
         return true;
     }
