@@ -7,7 +7,7 @@
         <thead>
             
                 <th>t1</th>
-                <th>t2</th>
+                <th><?php print_r($stats->nbAnimalMoyClient()); ?></th>
         </thead>
         <tbody>
                 <tr>
