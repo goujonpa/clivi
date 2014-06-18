@@ -22,16 +22,9 @@ switch($action) {
 		include 'view/form.php';
 		break;
 	case "detailFacture":
-		/*$list = Facture::getList("Liste des Factures");
-		$facture = new Facture();
-        $facture->select($_GET['id']);
-        $formConf = $facture->getForm();
-        include 'view/formDetail.php';*/
-
-        $ligneFacture = new LigneFacture();
-        $formConf = $ligneFacture->getForm();
-        include 'view/form.php';
-
+		// TODO: Ajouter bouton payer
+		// TODO: Ajouter résumé de la facture (client, prix etc... )
+        // TODO: Ajouter 3 boutons: "Ajouter Prestation", "Ajouter Produit", "Ajouter Medicament/Ordonnance"
         $list = LigneFacture::getList("Détails de la facture", $_GET["id"]);
         include 'view/list.php';
 		break;
