@@ -22,13 +22,17 @@ switch($action) {
 		include 'view/form.php';
 		break;
 	case "detailFacture":
-		$list = Facture::getList("Liste des Factures");
+		/*$list = Facture::getList("Liste des Factures");
 		$facture = new Facture();
         $facture->select($_GET['id']);
         $formConf = $facture->getForm();
-        include 'view/formDetail.php';
+        include 'view/formDetail.php';*/
 
-        $list = LigneFacture::getList("Détail de la facture", $_GET["id"]);
+        $ligneFacture = new LigneFacture();
+        $formConf = $ligneFacture->getForm();
+        include 'view/form.php';
+
+        $list = LigneFacture::getList("Détails de la facture", $_GET["id"]);
         include 'view/list.php';
 		break;
 	default:

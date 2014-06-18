@@ -59,7 +59,7 @@ class Stats
                                                 LIMIT 3" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
