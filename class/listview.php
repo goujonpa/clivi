@@ -9,7 +9,7 @@ class ListView
     public function __construct($class, $title)
     {
         $this->title = $title;
-        $this->$objArray = $class::getAll();
+        $this->objArray = $class::getAll();
     }
 
     public function getTitle() {
