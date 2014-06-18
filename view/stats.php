@@ -17,8 +17,8 @@
         </tbody>
       </table>
 
-      <table>
-            <caption>Top 3 des plus gros client : </caption>
+      <table class="table">
+            <caption> <th> Top 3 des plus gros client : </th> </caption>
 
                <tr>
                    <th>Nom</th>
