@@ -2,7 +2,7 @@
 
 class Form {
 	protected $object;
-	protected $action;
+	public $action;
 	protected $error = null;
 
 	public function __construct(&$obj) {
