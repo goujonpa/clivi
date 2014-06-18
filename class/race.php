@@ -2,10 +2,20 @@
 
 class Race extends Objet
 {
-    public $_primaryAttr = "nom";
+    protected $id
     protected $nom;
     protected $espece;
     protected $prix_intervention;
+
+    public function id()
+    {
+        return $this->id;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function nom()
     {

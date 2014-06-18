@@ -2,9 +2,19 @@
 
 class Espece extends Objet
 {
-    public $_primaryAttr = "nom";
+    protected $id
     protected $nom;
     protected $prix_consultation;
+
+    public function id()
+    {
+        return $this->id;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function nom()
     {
