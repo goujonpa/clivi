@@ -6,6 +6,10 @@ class Race extends Objet
     protected $nom;
     protected $espece;
     protected $prix_intervention;
+    public $_specialFields = array(
+        "espece" => array(
+            "t" => "ForeignField"
+        ));
 
     public function id()
     {

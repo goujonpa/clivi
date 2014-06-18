@@ -136,4 +136,8 @@ class Objet
         $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
         $this->fromDb($ligne);
     }
+
+    public function str() {
+        return self::dbName()." #".$this->{$this->_primaryAttr};
+    }
 }
