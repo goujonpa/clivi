@@ -18,7 +18,7 @@ switch($action) {
 							"keys" => array("nom", "proprio", "race", "poids", "genre", "sterile", "dateNaissance", "dateDeces", "taille", "code"));
 		include 'view/list.php';
 		break;
-	case "add":
+	case "addAnimal":
 		$animal = new Animal();
 		$formConf = $animal->getForm();
 		include 'view/form.php';
