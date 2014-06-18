@@ -63,8 +63,12 @@ class Objet
             if(isset($this->_specialFields[$keyName]["label"])) {
                 $field->label = $this->_specialFields[$keyName]["label"];
             }
+            if(isset($this->_specialFields[$keyName]["i"])) {
+                $field->i = $this->_specialFields[$keyName]["i"];
+            }
             $ret[] = $field;
         }
+        usort($ret, function($a, $b) {return $a->i - $b->i;} );
         return $ret;
     }
 
