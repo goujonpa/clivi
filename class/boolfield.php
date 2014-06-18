@@ -3,9 +3,10 @@ class BoolField extends Field
 {
 
     public function html() {
-        $html = '<div class = "form-group">
-                    <label for = "form'.$this->name.'">'.ucfirst($this->name).'</label>
-                    <input type = "checkbox" class="form-control" name = "'.$this->name.'" value ="'.$this->value.'">
+        $html = '<div class = "checkbox">
+                    <label for = "form'.$this->name.'">
+                    <input type = "checkbox" name = "'.$this->name.'" value ="'.$this->value.'"> '.ucfirst($this->name).'
+                    </label>
                 </div>';
         return $html; 
     }
