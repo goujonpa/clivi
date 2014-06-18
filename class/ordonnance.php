@@ -22,7 +22,8 @@ class Ordonnance extends Objet
             "t" => "ForeignField"
         ),
         "prix" => array(
-            "i" => 5
+            "i" => 5,
+            "t" => "PriceField"
         ));
 
     public function id()

@@ -5,6 +5,18 @@ class Espece extends Objet
     protected $id;
     protected $nom;
     protected $prix_consultation;
+    public $_specialFields = array(
+        "id" => array(
+            "i" => 1
+        ),
+        "nom" => array(
+            "i" => 2
+        ),
+        "prix_consultation" => array(
+            "i" => 3,
+            "label" => "Prix de la consultation",
+            "t" => "PriceField"
+        ));
 
     public function id()
     {

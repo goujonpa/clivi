@@ -30,7 +30,8 @@ class Facture extends Objet
         ),
         "prix_total" => array(
             "label" => "Prix total",
-            "i" => 9
+            "i" => 9,
+            "t" => "PriceField"
         ));
 
     public function id()

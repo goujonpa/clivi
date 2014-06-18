@@ -1,10 +1,12 @@
 <?php
+
+class DateField extends Field
 {
     public function html() {
-        $html = '<div class = "form-group">
-                    <label for = "form'.$this->name.'">
-                    <input type = "date" name = "'.$this->name.'" value ="'.$this->value.'"> '.$this->label.'
-                    </label>
+        // Todo, if isset($_POST[$this->name]) && !$this->validate() => Show a error msg explanation for this line.
+        $html = '<div class="form-group">
+                    <label for="form'.$this->name.'">'.$this->label.'</label>
+                    <input type="number" class="form-control" name="'.$this->name.'" value="'.$this->value.'"> 
                 </div>';
         return $html; 
     }
@@ -12,16 +14,20 @@
     public function validate()
     {
  
-        /*if (isset($_POST[$this->name]))
+        if (isset($_POST[$this->name]))
         {
-            $_POST[$this->name] = htmlspecialchars($_POST[$this->name]); 
-            if (preg_match("#^0[1-68]([-. ]?[0-9]{2}){4}$#", $_POST[$this->name]))
-                {
-                    $this->value = $_POST[$this->name];
-                    return true;
-                }
-        */
+            $this->value = $_POST[$this->name];
+            if ($this->value > -1) {
+                return true;
+            }
+        }
         return false;
     }
 
+    public function show() {
+        $prix = $this->value;
+        $html = (string)$prix;
+        $html .= "€";
+        return $html;
+    }
 }

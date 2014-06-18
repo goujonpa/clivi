@@ -20,6 +20,7 @@ class Produit extends Objet
         ),
         "prix" => array(
             "i" => 4,
+            "t" => "PriceField"
         ));
     
     public function id()

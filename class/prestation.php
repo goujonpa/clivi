@@ -17,7 +17,8 @@ class Prestation extends Objet
             "i" => 1
         )
         "prix" => array(
-            "i" => 4
+            "i" => 4,
+            "t" => "PriceField"
         ));
 
     public function id()

@@ -20,7 +20,8 @@ class Race extends Objet
         ),
         "prix_intervention" => array(
             "label" => "Prix de l'intervetion",
-            "i" => 4
+            "i" => 4,
+            "t" => "PriceField"
         ));
 
     public function id()
