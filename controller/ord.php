@@ -8,7 +8,7 @@ $actions = array("listeOrdonnance", "addOrdonnance", "editOrdonnance", "listePro
 
 // Check action is correct
 if(!in_array($action, $actions)) {
-	$action = "liste";
+	$action = "listeOrdonnance";
 }
 
 switch($action) {
