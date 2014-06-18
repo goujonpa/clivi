@@ -15,7 +15,7 @@ switch($action) {
 	case "listeAnimal":
 		$listArray = Animal::getAll();
 		$listParams = array("title" => "Liste des animaux de la clinique",
-							"keys" => array("id", "nom", "proprio", "race", "poids", "genre", "sterile", "date_naissance", "date_deces", "taille", "code"));
+							"keys" => array("id", "nom", "client", "race", "poids", "genre", "sterile", "date_naissance", "date_deces", "taille", "code"));
 		$editLink = "editAnimal";
 		include 'view/list.php';
 		break;

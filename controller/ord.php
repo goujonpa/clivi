@@ -15,7 +15,7 @@ switch($action) {
 	case "liste":
 		$listArray = Ordonnance::getAll();
 		$listParams = array("title" => "Liste des ordonnances",
-							"keys" => array("id", "animal", "veterinaire", "date", "prix"));
+							"keys" => array("id", "animal", "employe", "date", "prix"));
 		$editLink = "edit";
 		include 'view/list.php';
 		break;

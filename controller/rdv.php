@@ -15,7 +15,7 @@ switch($action) {
 	case "liste":
 		$listArray = Rdv::getAll();
 		$listParams = array("title" => "Liste des rendez-vous",
-							"keys" => array("id", "animal", "veterinaire", "date", "duree"));
+							"keys" => array("id", "animal", "employe", "date", "duree"));
 		$editLink = "edit";
 		include 'view/list.php';
 		break;

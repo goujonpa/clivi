@@ -4,7 +4,7 @@ class Animal extends Objet
 {
     protected $id;
     protected $nom;
-    protected $proprio;
+    protected $client;
     protected $race;
     protected $poids;
     protected $genre;
@@ -17,7 +17,7 @@ class Animal extends Objet
         "sterile" => array(
             "t" => "BoolField"
         ),
-        "proprio" => array(
+        "client" => array(
             "t" => "ForeignField"
         ),
         "race" => array(
@@ -44,14 +44,14 @@ class Animal extends Objet
         $this->nom = $nom;
     }
 
-    public function proprio()
+    public function client()
     {
-        return $this->proprio;
+        return $this->client;
     }
     
-    public function setProprio($proprio)
+    public function setClient($client)
     {
-        $this->proprio = $proprio;
+        $this->client = $client;
     }
 
     public function race()
