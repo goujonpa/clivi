@@ -16,6 +16,12 @@ class Animal extends Objet
     public $_specialFields = array(
         "sterile" => array(
             "t" => "BoolField"
+        ),
+        "proprio" => array(
+            "t" => "ForeignField"
+        ),
+        "race" => array(
+            "t" => "ForeignField"
         ));
 
     public function id()

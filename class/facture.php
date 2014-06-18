@@ -9,6 +9,13 @@ class Facture extends Objet
     protected $date_paiement;
     protected $moyen_paiement;
     protected $prix_total;
+    public $_specialFields = array(
+        "employe" => array(
+            "t" => "BoolField"
+        ),
+        "animal" => array(
+            "t" => "ForeignField"
+        ));
 
     public function id()
     {
