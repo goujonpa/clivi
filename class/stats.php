@@ -42,7 +42,7 @@ class Stats
                                                 GROUP BY c.nom, c.prenom, c.id" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
@@ -56,6 +56,7 @@ class Stats
                                                 WHERE a.client = c.id
                                                 AND f.animal = a.id
                                                 GROUP BY c.nom, c.prenom, c.id
+                                                ORDER BY prix DESC
                                                 LIMIT 3" ); // on prépare notre requête
         $requete_prepare->execute();
 
@@ -76,7 +77,7 @@ class Stats
                                                 LIMIT 3" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
