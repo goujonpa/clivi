@@ -13,10 +13,7 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "listeAnimal":
-		$listArray = Animal::getAll();
-		$listParams = array("title" => "Liste des animaux de la clinique",
-							"keys" => array("id", "nom", "client", "race", "poids", "genre", "sterile", "date_naissance", "date_deces", "taille", "code"));
-		$editLink = "editAnimal";
+		$list = Animal::getList("Liste des Animaux");
 		include 'view/list.php';
 		break;
 	case "addAnimal":
@@ -31,11 +28,7 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "listeEspece":
-		$listArray = Espece::getAll();
-		$listParams = array("title" => "Liste des espèces d'animaux",
-							"keys" => array("id", "nom", "prix_consultation"));
-		$editLink = "editEspece";
-		include 'view/list.php';
+		$list = Espece::getList("Liste des Especes");
 		break;
 	case "addEspece":
 		$espece = new Espece();
@@ -49,10 +42,7 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "listeRace":
-		$listArray = Race::getAll();
-		$listParams = array("title" => "Liste des races",
-							"keys" => array("id", "nom", "espece", "prix_intervention"));
-		$editLink = "editRace";
+		$list = Race::getList("Liste des Races");
 		include 'view/list.php';
 		break;
 	case "addRace":
