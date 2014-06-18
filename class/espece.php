@@ -35,4 +35,8 @@ class Espece extends Objet
     {
         $this->prix_consultation = $prix_consultation;
     }
+
+    public function str() {
+        return $this->nom;
+    }
 }
