@@ -44,7 +44,7 @@ switch($action) {
 		break;
 	case "editEspece":
 		$espece = new Espece();
-        $espece->select($_GET['nom']);
+        $espece->select($_GET['id']);
         $formConf = $espece->getForm();
         include 'view/form.php';
 		break;
@@ -62,7 +62,7 @@ switch($action) {
 		break;
 	case "editRace":
 		$race = new Race();
-        $race->select($_GET['nom']);
+        $race->select($_GET['id']);
         $formConf = $race->getForm();
         include 'view/form.php';
 		break;	
