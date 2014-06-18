@@ -7,10 +7,13 @@ class Employe extends Personne
     public $_specialFields = array(
         "is_veterinaire" => array(
             "t" => "BoolField",
-            "label" => "Veterinaire"
+            "label" => "Veterinaire",
+            "i" => 9
+
         ),
         "id_national" => array(
-            "label" => "Identifiant national"
+            "label" => "Identifiant national",
+            "i" => 10
         ));
 
     public function id_national()
