@@ -54,7 +54,7 @@ class Objet
         foreach(array_keys(get_object_vars($this)) as $keyName) {
             if($keyName[0] == "_") { continue; }
             if($keyName == $this->_primaryAttr) { $ret[] = new Field($keyName, $this->$keyName, true); continue; }
-            if(in_array($keyName, $this->_specialFields)) {
+            if(in_array($keyName, array_keys($this->_specialFields))) {
                 $ret[] = new $this->_specialFields[$keyName]["t"]($keyName, $this->$keyName);
             } else {
                 $ret[] = new Field($keyName, $this->$keyName);
