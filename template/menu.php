@@ -58,7 +58,7 @@
                             <li class="dropdown-header">Ordonnances</li>
                             <li><a href="<?php echo $base_url; ?>ord/liste">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>ord/add">Ajouter</a></li>
-                            <li><a class="divider"></li>
+                            <li class="divider"></li>
                             <li class="dropdown-header">Produit</li>
                             <li><a href="<?php echo $base_url; ?>ord/listeProduit">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>ord/addProduit">Ajouter</a></li>
