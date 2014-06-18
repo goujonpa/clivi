@@ -33,12 +33,9 @@
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
-        height: 40px;
-        background-color: #108a93;        
-        padding-top: 10px;
-        padding-bottom: 0px;
+        height: 30px;
+        background-color: #108a93;
         text-align: center;
-        color: black;
 
     }
 
