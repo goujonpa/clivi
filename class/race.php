@@ -2,7 +2,7 @@
 
 class Race extends Objet
 {
-    protected $id
+    protected $id;
     protected $nom;
     protected $espece;
     protected $prix_intervention;
