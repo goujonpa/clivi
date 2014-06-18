@@ -72,7 +72,10 @@ class Objet
         $params = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
             if($keyName[0] == "_") { continue; }
-            if($keyName == $this->_primaryAttr) { 
+            if($keyName == $this->_primaryAttr) {
+                if($this->_primaryAttr != "id") {
+                    continue;
+                }
                 $values[$keyName] = "nextval('".$dbName."_id_seq'::regclass)";
                 continue;
             }
@@ -106,7 +109,7 @@ class Objet
         foreach(array_keys(get_object_vars($this)) as $keyName) {
             if($keyName[0] == "_") { continue; }
             $params[$keyName] = $this->$keyName;
-            if($keyName == $this->_primaryAttr) { continue; }
+            if($keyName == $this->_primaryAttr && $this->_primaryAttr == "id") { continue; }
             $values[$keyName] = $keyName." = :".$keyName;
         }
 
