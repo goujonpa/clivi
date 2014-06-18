@@ -6,6 +6,10 @@ class Produit extends Objet
     protected $nom;
     protected $prix;
     protected $is_medicament;
+    public $_specialFields = array(
+        "is_medicament" => array(
+            "t" => "BoolField"
+        ));
     
     public function id()
     {
