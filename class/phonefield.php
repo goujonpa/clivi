@@ -25,4 +25,13 @@ class PhoneField extends Field
         return false;
     }
 
+    public function show() {
+        $num = $this->value;
+        $html = "";
+        for($i = 0; i < 5; i++) {
+            $html += substr($num, 2*$i, 2);
+            $html += ".";
+        }
+        return $html;
+    }
 }

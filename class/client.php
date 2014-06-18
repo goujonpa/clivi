@@ -2,6 +2,13 @@
 
 class Client extends Personne
 {
+
+    public $_specialFields = array(
+    "num_tel" => array(
+        "t" => "PhoneField",
+        "label" => "Numero de telephone",
+    ));
+
     protected $num_tel;
 
     public function num_tel()
@@ -13,4 +20,5 @@ class Client extends Personne
     {
         $this->num_tel = $num_tel;
     }
+
 }
