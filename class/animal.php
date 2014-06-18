@@ -14,14 +14,35 @@ class Animal extends Objet
     protected $taille;
     protected $code;
     public $_specialFields = array(
+        "id" => array(
+            "i" => 1
+        ),
+        "nom" => array(
+            "i" => 2
+        ),
+        "genre" => array(
+            "i" => 5
+        ),
+        "poids" => array(
+            "i" => 6
+        ),
+        "date_naissance" => array(
+            "i" => 8
+        ),
+        "date_deces" => array(
+            "i" => 9
+        ),
         "sterile" => array(
-            "t" => "BoolField"
+            "t" => "BoolField",
+            "i" => 7
         ),
         "client" => array(
-            "t" => "ForeignField"
+            "t" => "ForeignField",
+            "i" => 3
         ),
         "race" => array(
-            "t" => "ForeignField"
+            "t" => "ForeignField",
+            "i" => 4
         ));
 
     public function id()
