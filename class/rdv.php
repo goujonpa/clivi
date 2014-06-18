@@ -7,6 +7,13 @@ class Rdv extends Objet
     protected $animal;
     protected $date;
     protected $duree;
+    public $_specialFields = array(
+        "veterinaire" => array(
+            "t" => "BoolField"
+        ),
+        "animal" => array(
+            "t" => "ForeignField"
+        ));
 
 
     public function id()

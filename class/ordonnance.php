@@ -7,6 +7,13 @@ class Ordonnance extends Objet
     protected $animal;
     protected $date;
     protected $prix;
+    public $_specialFields = array(
+        "veterinaire" => array(
+            "t" => "BoolField"
+        ),
+        "animal" => array(
+            "t" => "ForeignField"
+        ));
 
     public function id()
     {
