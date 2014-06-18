@@ -36,4 +36,24 @@
           <?php endforeach; ?>
         </tbody>
       </table>
+
+      <br/>
+      <hr/>
+      <h4>Top 3 des plus grosses factures</h4>
+      <table class="table">
+        <thead>
+                <th>Nom </th>
+                <th>Prenom </th> 
+                <th>Montant de la facture </th> 
+        </thead>
+          <tbody>
+          <?php foreach ($stats->top3Facture() as $ligne): ?>
+            <tr>
+                <td><?php echo $ligne["nom"]; ?> </td>
+                <td><?php echo $ligne["prenom"]; ?> </td>
+                <td><?php echo $ligne["prix"]; ?> </td> 
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
 	</div>
