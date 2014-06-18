@@ -16,4 +16,11 @@
                 </tr>
         </tbody>
       </table>
+
+      <table class="table">
+            <caption> <th> Top 3 des plus gros client : </th> </caption>
+        <thead>
+                <th><?php print_r($stats->top3Client()); ?></th>
+        </thead>
+</table>
 	</div>

@@ -29,6 +29,7 @@ switch($action) {
 		break;
 	case "listeEspece":
 		$list = Espece::getList("Liste des Especes");
+		include 'view/list.php';
 		break;
 	case "addEspece":
 		$espece = new Espece();
