@@ -33,7 +33,7 @@ switch($action) {
 	case "listeEspece":
 		$listArray = Espece::getAll();
 		$listParams = array("title" => "Liste des espèces d'animaux",
-							"keys" => array("nom", "prix_consultation"));
+							"keys" => array("id", "nom", "prix_consultation"));
 		$editLink = "editEspece";
 		include 'view/list.php';
 		break;
@@ -51,7 +51,7 @@ switch($action) {
 	case "listeRace":
 		$listArray = Race::getAll();
 		$listParams = array("title" => "Liste des races",
-							"keys" => array("nom", "espece", "prix_intervention"));
+							"keys" => array("id", "nom", "espece", "prix_intervention"));
 		$editLink = "editRace";
 		include 'view/list.php';
 		break;
