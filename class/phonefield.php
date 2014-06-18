@@ -30,8 +30,8 @@ class PhoneField extends Field
         $num = $this->value;
         $html = "";
         for($i = 0; $i < 5; $i++) {
-            $html += substr($num, 2*$i, 2);
-            $html += ".";
+            $html .= substr($num, 2*$i, 2);
+            $html .= ".";
         }
         return $html;
     }
