@@ -1,6 +1,6 @@
 <?php
 
-class ForeignField {
+class ForeignField extends Field {
 	protected $name;
 	protected $value;
 	protected $primary;
