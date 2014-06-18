@@ -11,7 +11,7 @@ class Facture extends Objet
     protected $prix_total;
     public $_specialFields = array(
         "employe" => array(
-            "t" => "BoolField"
+            "t" => "ForeignField"
         ),
         "animal" => array(
             "t" => "ForeignField"
