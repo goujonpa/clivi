@@ -22,7 +22,7 @@ class Facture extends Objet
         ),
         "date_paiement" => array(
             "label" => "Date de paiement",
-            "i" => -1
+            "i" => 8
         ),
         "moyen_paiement" => array(
             "label" => "Moyen de paiement",
