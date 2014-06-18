@@ -6,7 +6,7 @@
     <table class="table">
         <thead>
             <?php foreach($list->getLabels() as $field): ?>
-                <th><?php echo $field->getLabel(); ?></th>
+                <th><?php echo $field->getLabels(); ?></th>
             <?php endforeach; ?>
                 <th></th>
         </thead>
