@@ -5,6 +5,7 @@ class ForeignField {
 	protected $value;
 	protected $primary;
 	protected $choices;
+	public $label;
 
 	public function __construct($name, &$value, $primary=false) {
 		$this->name = $name;
@@ -12,6 +13,7 @@ class ForeignField {
 		$this->primary = $primary;
 		$cl = ucfirst($name);
 		$this->choices = $cl::getAll();
+		$this->label = ucfirst($name);
 	}
 
 	public function html($form) {
@@ -22,7 +24,7 @@ class ForeignField {
 		if($this->primary && $form->action == "Modifier") { $disabled = "disabled"; }
 
 		$html = '<div class="form-group">
-    <label for="form'.$this->name.'">'.ucfirst($this->name).'</label>
+    <label for="form'.$this->name.'">'.$this->label.'</label>
     <select class="form-control" name="'.$this->name.'">';
     	foreach ($this->choices as $value) {
     		if($this->value == $value->{$value->_primaryAttr}()) { $selected = "selected"; } else { $selected = ""; }
