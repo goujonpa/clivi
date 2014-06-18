@@ -37,7 +37,7 @@ class Personne extends Objet
     }
 
     public function str() {
-        return $this->prenom.$this->nom;
+        return $this->prenom." ".$this->nom;
     }
 }
 
