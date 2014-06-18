@@ -2,7 +2,7 @@
 
 class Espece extends Objet
 {
-    protected $id
+    protected $id;
     protected $nom;
     protected $prix_consultation;
 
