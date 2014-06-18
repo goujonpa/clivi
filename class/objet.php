@@ -68,8 +68,9 @@ class Objet
             } else {
                 $field->i = 5;
             }
-            if($field->i == -1)
+            if($field->i == -1) {
                 continue;
+            }
             $ret[] = $field;
         }
         usort($ret, function($a, $b) {return $a->i - $b->i;} );
