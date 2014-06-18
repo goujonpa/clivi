@@ -4,6 +4,10 @@ class Employe extends Personne
 {
     protected $id_national;
     protected $is_veterinaire;
+    public $_specialFields = array(
+        "is_veterinaire" => array(
+            "t" => "BoolField"
+        ));
 
     public function id_national()
     {
