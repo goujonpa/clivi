@@ -32,7 +32,7 @@ class Form {
 						$this->object->update();
 					} else {
 						$this->object->insert();
-						$this->object = "Modifier";
+						$this->action = "Modifier";
 					}
 				} catch (Exception $e) {
 					$this->error = $e->getMessage();
