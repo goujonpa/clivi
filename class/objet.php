@@ -53,7 +53,7 @@ class Objet
         $ret = array();
         foreach(array_keys(get_object_vars($this)) as $keyName) {
             if($keyName[0] == "_") { continue; }
-            if($keyName == $this->_primaryAttr && $this->_primaryAttr == "") { $ret[] = new Field($keyName, $this->$keyName, true); continue; }
+            if($keyName == $this->_primaryAttr && $this->_primaryAttr == "id") { $ret[] = new Field($keyName, $this->$keyName, true); continue; }
             if(in_array($keyName, array_keys($this->_specialFields))) {
                 $ret[] = new $this->_specialFields[$keyName]["t"]($keyName, $this->$keyName);
             } else {
