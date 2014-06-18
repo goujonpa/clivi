@@ -24,15 +24,15 @@ class ForeignField extends Field {
 		if($this->primary && $form->action == "Modifier") { $disabled = "disabled"; }
 
 		$html = '<div class="form-group">
-    <label for="form'.$this->name.'">'.$this->label.'</label>
-    <select class="form-control" name="'.$this->name.'">';
-    	foreach ($this->choices as $value) {
-    		if($this->value == $value->{$value->_primaryAttr}()) { $selected = "selected"; } else { $selected = ""; }
-    		$html .= "<option value=".$value->{$value->_primaryAttr}()." ".$selected." >".$value->str()."</option>";
-    	}
+    				<label for="form'.$this->name.'">'.$this->label.'</label>
+    				<select class="form-control" name="'.$this->name.'">';
+			    	foreach ($this->choices as $value) {
+			    		if($this->value == $value->{$value->_primaryAttr}()) { $selected = "selected"; } else { $selected = ""; }
+			    		$html .= "<option value=".$value->{$value->_primaryAttr}()." ".$selected." >".$value->str()."</option>";
+			    	}
 
-		$html.= '</select>
-  </div>';
+					$html.= '</select>
+				</div>';
   		return $html;
 	}
 
@@ -48,6 +48,13 @@ class ForeignField extends Field {
 
 		$this->value = $_POST[$this->name];
 		return true;
+	}
+
+	public function show() {
+		$classname = $this->name;
+		$item = new $classname;
+		$item->select($this->value);
+		return $item->str();
 	}
 
 }
