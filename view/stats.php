@@ -31,7 +31,7 @@
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
-                <td><?php echo $ligne["prix"]; ?> </td> 
+                <td><?php echo $ligne["prix_total"]; ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>
