@@ -7,8 +7,19 @@ class Produit extends Objet
     protected $prix;
     protected $is_medicament;
     public $_specialFields = array(
+        "id" => array(
+            "i" => 1
+        ),
+        "nom" => array(
+            "i" => 2
+        ),
         "is_medicament" => array(
-            "t" => "BoolField"
+            "i" => 3,
+            "t" => "BoolField",
+            "label" => "Medicament"
+        ),
+        "prix" => array(
+            "i" => 4,
         ));
     
     public function id()
