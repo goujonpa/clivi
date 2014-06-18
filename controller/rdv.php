@@ -13,10 +13,7 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "liste":
-		$listArray = Rdv::getAll();
-		$listParams = array("title" => "Liste des rendez-vous",
-							"keys" => array("id", "animal", "employe", "date", "duree"));
-		$editLink = "edit";
+		$list = Rdv::getList("Liste des Rendez Vous");
 		include 'view/list.php';
 		break;
 	case "add":
@@ -31,10 +28,7 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "listePrestation":
-		$listArray = Prestation::getAll();
-		$listParams = array("title" => "Liste des prestations",
-							"keys" => array("id", "description", "type", "prix"));
-		$editLink = "editPrestation";
+		$list = Prestation::getList("Liste des Prestations");
 		include 'view/list.php';
 		break;
 	case "addPrestation":

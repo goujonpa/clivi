@@ -13,10 +13,7 @@ if(!in_array($action, $actions)) {
 
 switch($action) {
 	case "liste":
-		$listArray = Ordonnance::getAll();
-		$listParams = array("title" => "Liste des ordonnances",
-							"keys" => array("id", "animal", "employe", "date", "prix"));
-		$editLink = "edit";
+		$list = Ordonnance::getList("Liste des Ordonnances");
 		include 'view/list.php';
 		break;
 	case "add":
@@ -31,10 +28,7 @@ switch($action) {
         include 'view/form.php';
 		break;
 	case "listeProduit":
-		$listArray = Produit::getAll();
-		$listParams = array("title" => "Liste des ordonnances",
-							"keys" => array("id", "nom", "prix", "is_medicament"));
-		$editLink = "editProduit";
+		$list = Produit::getList("Liste des Produits");
 		include 'view/list.php';
 		break;
 	case "addProduit":
