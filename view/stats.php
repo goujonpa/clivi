@@ -6,7 +6,7 @@
       <table class="table">
         <thead>
             
-                <th>Facture moyenne par client : /th>
+                <th>Facture moyenne par client : </th>
                 <th><?php $tmp = $stats->factureMoyClient(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?></th>
         </thead>
         <tbody>
