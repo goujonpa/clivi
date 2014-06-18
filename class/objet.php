@@ -129,8 +129,8 @@ class Objet
         $dbName = self::dbName();
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE ".$this->_primaryAttr." = :id"); // on prépare notre requête
-        $requete_prepare->execute(array("id" => $id));
+        $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE ".$this->_primaryAttr." = :".$this->getAll()[0]); // on prépare notre requête
+        $requete_prepare->execute(array("{$this->getAll()[0]}" => $id));
 
         $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
         $this->fromDb($ligne);
