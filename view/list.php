@@ -22,7 +22,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <?php } catch(Exception $e) { 
-        echo $e->getMessage();
+    <?php } catch (Exception $e) { 
+        //echo $e->getMessage();
     } ?>
 </div>
