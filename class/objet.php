@@ -65,6 +65,8 @@ class Objet
             }
             if(isset($this->_specialFields[$keyName]["i"])) {
                 $field->i = $this->_specialFields[$keyName]["i"];
+            } else {
+                $field->i = 5;
             }
             $ret[] = $field;
         }
