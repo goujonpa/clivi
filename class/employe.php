@@ -12,7 +12,7 @@ class Employe extends Personne
         ),
         "id_national" => array(
             "label" => "Identifiant national",
-            "i" => 10
+            "i" => -1
         ));
 
     public function id_national()
