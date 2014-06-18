@@ -142,6 +142,6 @@ class Objet
     }
 
     public function getList($title) {
-        return new List(get_called_class(), $title);
+        return new ListView(get_called_class(), $title);
     }
 }
