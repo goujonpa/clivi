@@ -27,8 +27,17 @@
                     <li class="dropdown<?php if($page == "animal") { echo " active"; }?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Animaux<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo $base_url; ?>animal/liste">Liste</a></li>
-                            <li><a href="<?php echo $base_url; ?>animal/add">Ajouter</a></li>
+                            <li class="dropdown-header">Animal</li>
+                            <li><a href="<?php echo $base_url; ?>animal/listeAnimal">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>animal/addAnimal">Ajouter</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Espece</li>
+                            <li><a href="<?php echo $base_url; ?>animal/listeEspece">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>animal/addEspece">Ajouter</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Race</li>
+                            <li><a href="<?php echo $base_url; ?>animal/listeRace">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>animal/addRace">Ajouter</a></li>
                         </ul>
                     </li>
                     <li class="dropdown<?php if($page == "rdv") { echo " active"; }?>">
