@@ -46,7 +46,7 @@
                             <li class="dropdown-header">Rendez-vous</li>
                             <li><a href="<?php echo $base_url; ?>rdv/liste">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>rdv/add">Ajouter</a></li>
-                            
+                            <li class="divider"></li>
                             <li class="dropdown-header">Prestation</li>
                             <li><a href="<?php echo $base_url; ?>rdv/listePrestation">Liste</a></li>
                             <li><a href="<?php echo $base_url; ?>rdv/addPrestation">Ajouter</a></li>
