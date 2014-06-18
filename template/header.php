@@ -14,8 +14,6 @@
 
     <link href="http://tuxa.sme.utc/~nf17p110/css/sticky-footer.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://tuxa.sme.utc/~nf17p110/css/custom_bootstrap.css">
-
     <!-- Optional theme -->
     <link rel="icon" type="image/png" href="http://tuxa.sme.utc/~nf17p110/img/logo.png" />
 
@@ -35,8 +33,13 @@
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
-        height: 60px;
-        background-color: #f5f5f5;
+        height: 40px;
+        background-color: #108a93;        
+        padding-top: 10px;
+        padding-bottom: 0px;
+        text-align: center;
+        color: black;
+
     }
 
 
