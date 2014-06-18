@@ -5,8 +5,8 @@
     </div>
     <table class="table">
         <thead>
-            <?php foreach($list->getLabels() as $key): ?>
-                <th><?php echo ucfirst($key); ?></th>
+            <?php foreach($list->getLabels() as $field): ?>
+                <th><?php echo $field->getLabel(); ?></th>
             <?php endforeach; ?>
                 <th></th>
         </thead>
