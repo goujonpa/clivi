@@ -3,10 +3,10 @@
 class PhoneField extends Field
 {
     public function html() {
-        $html = '<div class = "form-group">
-                    <label for = "form'.$this->name.'">
-                    <input type = "tel" name = "'.$this->name.'" value ="'.$this->value.'"> '.$this->label.'
-                    </label>
+        // Todo, if isset($_POST[$this->name]) && !$this->validate() => Show a error msg explanation for this line.
+        $html = '<div class="form-group">
+                    <label for="form'.$this->name.'">'.$this->label.'</label>
+                    <input type="tel" name="'.$this->name.'" value="'.$this->value.'"> 
                 </div>';
         return $html; 
     }
