@@ -11,7 +11,7 @@
         </thead>
         <tbody>
                 <tr>
-                    <td>l1</td>
+                    <td><?php echo $stats->nbAnimalMoyClient()["value"]; ?></td>
                     <td>l2</td>
                 </tr>
         </tbody>
