@@ -33,7 +33,7 @@ class Objet
             $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName); // on prépare notre requête
             $requete_prepare->execute();
         } else {
-            $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE ".$this->_primaryAttr." = :id");
+            $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE id = :id");
             $requete_prepare->execute(array("id" => $id));
         }
 
