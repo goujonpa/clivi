@@ -56,6 +56,7 @@ class Stats
                                                 WHERE a.client = c.id
                                                 AND f.animal = a.id
                                                 GROUP BY c.nom, c.prenom, c.id
+                                                ORDER BY prix DESC
                                                 LIMIT 3" ); // on prépare notre requête
         $requete_prepare->execute();
 
