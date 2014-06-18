@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("liste", "add", "edit", "listePrestation", "addPrestation", "editPrestation");
+$actions = array("listeRdv", "addRdv", "editRdv", "listePrestation", "addPrestation", "editPrestation");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
@@ -12,16 +12,16 @@ if(!in_array($action, $actions)) {
 }
 
 switch($action) {
-	case "liste":
+	case "listeRdv":
 		$list = Rdv::getList("Liste des Rendez Vous");
 		include 'view/list.php';
 		break;
-	case "add":
+	case "addRdv":
 		$rdv = new Rdv();
 		$formConf = $rdv->getForm();
 		include 'view/form.php';
 		break;
-	case "edit":
+	case "editRdv":
 		$rdv = new Rdv();
         $rdv->select($_GET['id']);
         $formConf = $rdv->getForm();

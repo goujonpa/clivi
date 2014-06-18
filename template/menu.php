@@ -44,8 +44,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rendez-vous<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Rendez-vous</li>
-                            <li><a href="<?php echo $base_url; ?>rdv/liste">Liste</a></li>
-                            <li><a href="<?php echo $base_url; ?>rdv/add">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>rdv/listeRdv">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>rdv/addRdv">Ajouter</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Prestation</li>
                             <li><a href="<?php echo $base_url; ?>rdv/listePrestation">Liste</a></li>
@@ -56,8 +56,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordonnances<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Ordonnance</li>
-                            <li><a href="<?php echo $base_url; ?>ord/liste">Liste</a></li>
-                            <li><a href="<?php echo $base_url; ?>ord/add">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>ord/listeOrdonnance">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>ord/addOrdonnance">Ajouter</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Produit</li>
                             <li><a href="<?php echo $base_url; ?>ord/listeProduit">Liste</a></li>
@@ -67,8 +67,8 @@
                     <li class="dropdown<?php if($page == "fact") { echo " active"; }?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Factures<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo $base_url; ?>fact/liste">Liste</a></li>
-                            <li><a href="<?php echo $base_url; ?>fact/add">Ajouter</a></li>
+                            <li><a href="<?php echo $base_url; ?>fact/listeFacture">Liste</a></li>
+                            <li><a href="<?php echo $base_url; ?>fact/addFacture">Ajouter</a></li>
                         </ul>
                     </li>
                     <li <?php if($page == "stats") { echo 'class="active"'; }?>><a href="<?php echo $base_url; ?>stats/">Statistiques</a></li>

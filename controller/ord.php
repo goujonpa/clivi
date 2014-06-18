@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("liste", "add", "edit", "listeProduit", "addProduit", "editProduit");
+$actions = array("listeOrdonnance", "addOrdonnance", "editOrdonnanceOrdonnance", "listeProduit", "addProduit", "editProduit");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
@@ -12,16 +12,16 @@ if(!in_array($action, $actions)) {
 }
 
 switch($action) {
-	case "liste":
+	case "listeOrdonnance":
 		$list = Ordonnance::getList("Liste des Ordonnances");
 		include 'view/list.php';
 		break;
-	case "add":
+	case "addOrdonnanceOrdonnance":
 		$ordonnance = new Ordonnance();
 		$formConf = $ordonnance->getForm();
 		include 'view/form.php';
 		break;
-	case "edit":
+	case "editOrdonnance":
 		$ordonnance = new Ordonnance();
         $ordonnance->select($_GET['id']);
         $formConf = $ordonnance->getForm();
