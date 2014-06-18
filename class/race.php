@@ -50,4 +50,8 @@ class Race extends Objet
     {
         $this->prix_intervention = $prix_intervention;
     }
+
+    public function str() {
+        return $this->nom;
+    }
 }
