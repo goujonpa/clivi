@@ -22,6 +22,7 @@ class PhoneField extends Field
                     $this->value = $_POST[$this->name];
                     return true;
                 }
+        }
         return false;
     }
 
