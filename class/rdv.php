@@ -25,9 +25,7 @@ class Rdv extends Objet
         
         "duree" => array(
             "i" => 5
-        )
-        
-        );
+        ));
 
 
     public function id()

@@ -6,6 +6,19 @@ class Prestation extends Objet
     protected $description;
     protected $type;
     protected $prix;
+    public $_specialFields = array(
+        "description" => array(
+            "i" => 3
+        ),
+        "type" => array(
+            "i" => 2
+        )
+        "id" => array(
+            "i" => 1
+        )
+        "prix" => array(
+            "i" => 4
+        ));
 
     public function id()
     {
