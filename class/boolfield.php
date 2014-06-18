@@ -1,4 +1,5 @@
-<?
+<?php
+
 class BoolField extends Field
 {
     public function html($form) {
