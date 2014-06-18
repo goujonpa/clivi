@@ -9,7 +9,7 @@ class Ordonnance extends Objet
     protected $prix;
     public $_specialFields = array(
         "veterinaire" => array(
-            "t" => "BoolField"
+            "t" => "ForeignField"
         ),
         "animal" => array(
             "t" => "ForeignField"
