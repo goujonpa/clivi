@@ -17,7 +17,7 @@
 
       <br/>
       <hr/>
-      <h2>Top 3 des meilleurs clients</h2>
+      <h3>Top 3 des meilleurs clients</h3>
       <table class="table">
         <thead>
                 <th>Nom </th>
