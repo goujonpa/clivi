@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("liste", "add", "edit");
+$actions = array("liste", "addAnimal", "edit");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
@@ -16,6 +16,7 @@ switch($action) {
 		$listArray = Animal::getAll();
 		$listParams = array("title" => "Liste des animaux de la clinique",
 							"keys" => array("nom", "proprio", "race", "poids", "genre", "sterile", "dateNaissance", "dateDeces", "taille", "code"));
+		$editLink = "edit";
 		include 'view/list.php';
 		break;
 	case "addAnimal":

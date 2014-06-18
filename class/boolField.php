@@ -1,7 +1,6 @@
 <?
 class BoolField extends Field
 {
-
     public function html($form) {
         $html = '<div class = "form-group">
                     <label for = "form'.$this->name.'">'.ucfirst($this->name).'</label>
