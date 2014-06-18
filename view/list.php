@@ -5,13 +5,11 @@
     </div>
     <?php 
     $ok = true;
-    try { 
-        $test="toto";
-        //$test = $list->getLabels();
-    } catch (Exception $e) { 
-        echo $e->getMessage();
+    try {
+        $test=$list->getLabels();
+    } catch (Exception $e) { print($e->getMessage());
         $ok = false;
-    }*/ ?>
+    } ?>
     <?php if($ok) { ?>
     <table class="table">
         <thead>
