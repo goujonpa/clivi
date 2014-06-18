@@ -1,7 +1,7 @@
 <?php
 /*
-	Controller Statistiques, handle CRUD for statistiques.
+	Controller Statistiques, show statistiques.
 */
 
 
-
+include 'view/stats.php';
