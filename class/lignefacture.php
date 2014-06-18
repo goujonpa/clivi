@@ -80,3 +80,4 @@ class LigneFacture extends Objet
     {
         $this->remise = $remise;
     }
+}
