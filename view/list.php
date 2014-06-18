@@ -6,7 +6,7 @@
     <?php 
     $ok = true;
     try { 
-        $list->getLabels();
+        $test = $list->getLabels();
     } catch (Exception $e) { 
         echo $e->getMessage();
         $ok = false;
