@@ -174,7 +174,6 @@ class Stats
                                                 FROM animal a, race r
                                                 WHERE a.race = r.id
                                                 GROUP BY r.nom, r.id
-                                                ORDER BY count DESC
                                                 LIMIT 10" ); // on prépare notre requête
         $requete_prepare->execute();
 
@@ -193,7 +192,6 @@ class Stats
                                                 WHERE a.race = r.id
                                                 AND e.id = r.espece
                                                 GROUP BY e.nom, e.id
-                                                ORDER BY count DESC
                                                 LIMIT 10" ); // on prépare notre requête
         $requete_prepare->execute();
 
