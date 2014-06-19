@@ -21,8 +21,6 @@ class DateField extends Field
         } else {
             $this->value = null;
         }
-        print_r($_POST);
-        print_r($this);
 
         return true;
     }
