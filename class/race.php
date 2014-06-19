@@ -64,7 +64,9 @@ class Race extends Objet
     }
 
     public function str() {
-        $tostr = $this->nom.' '.$this->espece;
+        $esp = new Espece();
+        $esp->select($this->espece);
+        $tostr = $esp->str().' : '.$this->nom;
         return $tostr;
     }
 }
