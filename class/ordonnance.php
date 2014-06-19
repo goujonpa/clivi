@@ -12,7 +12,8 @@ class Ordonnance extends Objet
             "i" => 1
         ),
         "date" => array(
-            "i" => 2
+            "i" => 2,
+            "t" => "DateField"
         ),
         "animal" => array(
             "i" => 3
