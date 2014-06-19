@@ -50,7 +50,7 @@
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
-                <td><?php echo $ligne["prix"]; ?> </td> 
+                <td><?php echo number_format($ligne["prix"], 2, ',', ' '); ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>
