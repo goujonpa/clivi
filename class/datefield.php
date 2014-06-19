@@ -13,7 +13,12 @@ class DateField extends Field
 
     public function validate()
     {
-        $this->value = $_POST[$this->name];
+        if (isset($_POST[$this->name])) {
+            $this->value = $_POST[$this->name];
+        } else {
+            $this->value = NULL;
+        }
+
         return true;
     }
 
