@@ -24,15 +24,15 @@
         </thead>
         <thead>
                 <th>Nombre moyen d'animal par client : </th>
-                <th><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp["value"], 2, '€', ' '); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Facture moyenne : </th>
-                <th><?php $tmp = $stats->factureMoy(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->factureMoy(); $nb_formated = number_format($tmp["value"], 2, '€', ' '); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Total du chiffre d'affaire : </th>
-                <th><?php $tmp = $stats->totalCA(); $nb_formated = number_format($tmp["ca"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->totalCA(); $nb_formated = number_format($tmp["ca"], 2, '€', ' '); echo $nb_formated; ?></th>
         </thead>
       </table>
 
@@ -50,7 +50,7 @@
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
-                <td><?php echo number_format($ligne["prix"], 2, ',', ' '); ?> </td> 
+                <td><?php echo number_format($ligne["prix"], 2, '€', ' '); ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>
@@ -70,7 +70,7 @@
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
-                <td><?php echo number_format($ligne["prix_total"], 2, ',', ' '); ?> </td> 
+                <td><?php echo number_format($ligne["prix_total"], 2, '€', ' '); ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>
