@@ -2,14 +2,13 @@
 
 class Client extends Personne
 {
+    protected $num_tel;
 
     public $_specialFields = array(
     "num_tel" => array(
         "t" => "PhoneField",
         "label" => "Numero de telephone",
     ));
-
-    protected $num_tel;
 
     public function num_tel()
     {

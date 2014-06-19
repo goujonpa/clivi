@@ -27,7 +27,7 @@ class PriceField extends Field
     public function show() {
         $prix = $this->value;
         $html = (string)$prix;
-        $html .= "€";
+        $html .= " €";
         return $html;
     }
 }

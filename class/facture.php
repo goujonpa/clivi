@@ -18,11 +18,13 @@ class Facture extends Objet
         ),
         "date_edition" => array(
             "label" => "Date d'édition",
-            "i" => 8
+            "i" => 8,
+            "t" => "DateField"
         ),
         "date_paiement" => array(
             "label" => "Date de paiement",
-            "i" => 8
+            "i" => 8,
+            "t" => "DateField"
         ),
         "moyen_paiement" => array(
             "label" => "Moyen de paiement",

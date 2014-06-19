@@ -20,7 +20,8 @@ class Rdv extends Objet
             "i" => 1
         ),
         "date" => array(
-            "i" => 4
+            "i" => 4,
+            "t" => "DateField"
         ),        
         "duree" => array(
             "i" => 5
