@@ -79,7 +79,8 @@ class Ordonnance extends Objet
 
     public function str() {
         $animal = new Animal()
-        $fields = $animal->select($this->id)
-        return $fields["nom"]." ".$this->date;
+        $animal->select($this->animal)
+        $tostr = $animal->str().' : '.$this->date;
+        return $tostr;
     }
 }

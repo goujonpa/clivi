@@ -108,7 +108,8 @@ class Facture extends Objet
 
     public function str() {
         $animal = new Animal()
-        $fields = $animal->select($this->id)
-        return $fields["nom"]." ".$this->prix_total;
+        $animal->select($this->animal)
+        $tostr = $animal->str().' : '.$this->prix_total;
+        return $tostr;
     }
 }
