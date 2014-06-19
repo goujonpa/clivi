@@ -62,4 +62,8 @@ class Produit extends Objet
     {
         $this->is_medicament = $is_medicament;
     }
+
+    public function str() {
+        return $this->nom;
+    }
 }

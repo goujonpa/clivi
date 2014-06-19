@@ -152,16 +152,16 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT e.nom, e.prenom, COUNT(*) AS c 
+        $requete_prepare = $bdd->db->prepare("  SELECT e.nom, e.prenom, COUNT(*) AS count 
                                                 FROM employe e, rdv r 
                                                 WHERE e.id = r.employe
                                                 AND e.is_veterinaire = '1'
                                                 GROUP BY e.nom, e.prenom, e.id
-                                                ORDER BY c DESC
+                                                ORDER BY count DESC
                                                 LIMIT 5" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
