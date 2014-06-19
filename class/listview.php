@@ -6,10 +6,10 @@ class ListView
     protected $objArray;
     public $class;
 
-    public function __construct($class, $title, $id=null)
+    public function __construct($class, $title, $arr=Array())
     {
         $this->title = $title;
-        $this->objArray = $class::getAll($id);
+        $this->objArray = $class::getAll($arr);
         $this->class = $class;
     }
 

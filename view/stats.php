@@ -143,7 +143,7 @@
                 <th>Nombre d'individu </th> 
         </thead>
           <tbody>
-          <?php foreach ($stats->top10Race) as $ligne): ?>
+          <?php foreach ($stats->top10Race() as $ligne): ?>
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["count"]; ?> </td> 

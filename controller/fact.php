@@ -47,7 +47,7 @@ switch($action) {
 		echo ' <a href="'.$base_url.$page.'/addProduit'.'?factId='.$_GET["id"].'" type="button" class="btn btn-success">Ajouter un Produit</a>';
 		echo ' <a href="'.$base_url.$page.'/addOrd'.'?factId='.$_GET["id"].'" type="button" class="btn btn-success">Ajouter une Ordonnance</a>';
         echo '</div>';
-        $list = LigneFacture::getList("Détails de la facture", $_GET["id"]);
+        $list = LigneFacture::getList("Détails de la facture", array("facture" => $_GET["id"]));
         include 'view/list.php';
 		break;
 	default:
