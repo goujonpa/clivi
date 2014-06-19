@@ -27,7 +27,7 @@ class LigneFacture extends Objet
         ),
         "facture" => array(
             "t" => "ForeignField",
-            "i" => 6
+            "i" => -1
         ),
         "remise" => array(
             "i" => 7
