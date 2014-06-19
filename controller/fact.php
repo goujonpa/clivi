@@ -24,9 +24,11 @@ switch($action) {
 	case "detailFacture":
 		// TODO: Ajouter bouton payer
 		// TODO: Ajouter résumé de la facture (client, prix etc... )
+		echo '<div class="container">';
 		echo '<a href="'.$base_url.$page.'/addPresta'.'?factId='.$_GET["id"].'" type="button" class="btn btn-success">Ajouter une Prestation</a>';
 		echo '<a href="'.$base_url.$page.'/addProduit'.'?factId='.$_GET["id"].'" type="button" class="btn btn-success">Ajouter un Produit</a>';
 		echo '<a href="'.$base_url.$page.'/addOrd'.'?factId='.$_GET["id"].'" type="button" class="btn btn-success">Ajouter une Ordonnance</a>';
+        echo '</div>';
         $list = LigneFacture::getList("Détails de la facture", $_GET["id"]);
         include 'view/list.php';
 		break;
