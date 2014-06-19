@@ -80,7 +80,7 @@ class Ordonnance extends Objet
     public function str() {
         $animal = new Animal();
         $animal->select($this->animal);
-        $tostr = $animal->str().' : '.$this->date;
+        $tostr = $animal->str().' '.$this->date;
         return $tostr;
     }
 }
