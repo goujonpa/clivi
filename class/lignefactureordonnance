@@ -1,0 +1,12 @@
+<?php
+
+class LigneFactureOrdonnance extends LigneFacture
+{
+	public $_specialFields = array(
+        "prestation" => array(
+            "it" => -1
+        ),
+        "produit" => array(
+            "i" => -1
+        ));
+}
