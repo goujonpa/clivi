@@ -24,7 +24,7 @@
         </thead>
         <thead>
                 <th>Nombre moyen d'animal par client : </th>
-                <th><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?> &euro;</th>
+                <th><?php $tmp = $stats->nbAnimalMoyClient(); $nb_formated = number_format($tmp["value"], 2, ',', ' '); echo $nb_formated; ?> </th>
         </thead>
         <thead>
                 <th>Facture moyenne : </th>
