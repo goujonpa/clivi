@@ -12,7 +12,6 @@ class Race extends Objet
             "i" => 3
         ),
         "nom" => array(
-            "t" => "ForeignField",
             "i" => 2
         ),
         "id" => array(
