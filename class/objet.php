@@ -30,13 +30,14 @@ class Objet
         $bdd = new Db();
         $result = Array();
         if(count($arr) == 0) {
-            $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName); // on prépare notre requête
+            $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." ORDER BY id DESC"); // on prépare notre requête
             $requete_prepare->execute();
         } else {
             $req = "SELECT * FROM ".$dbName." WHERE 1=1";
             foreach($arr as $k => $a) {
                 $req .= " AND $k = :$k";
             }
+            $req .= " ORDER BY id DESC";
             $requete_prepare = $bdd->db->prepare($req);
             $requete_prepare->execute($arr);
         }
