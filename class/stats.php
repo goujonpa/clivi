@@ -170,14 +170,15 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT r.nom, count(*)
+        $requete_prepare = $bdd->db->prepare("  SELECT r.nom, count(*) AS count
                                                 FROM animal a, race r
                                                 WHERE a.race = r.id
                                                 GROUP BY r.nom, r.id
+                                                ORDER BY count DESC
                                                 LIMIT 10" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
@@ -187,15 +188,16 @@ class Stats
 
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT e.nom, count(*)
+        $requete_prepare = $bdd->db->prepare("  SELECT e.nom, count(*) AS count
                                                 FROM animal a, race r, espece e
                                                 WHERE a.race = r.id
                                                 AND e.id = r.espece
                                                 GROUP BY e.nom, e.id
+                                                ORDER BY count DESC
                                                 LIMIT 10" ); // on prépare notre requête
         $requete_prepare->execute();
 
-        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+        $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
 
         return $ligne;
     }
