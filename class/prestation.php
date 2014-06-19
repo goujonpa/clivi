@@ -60,4 +60,8 @@ class Prestation extends Objet
     {
         $this->prix = $prix;
     }
+
+    public function str() {
+        return $this->description;
+    }
 }
