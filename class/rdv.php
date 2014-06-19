@@ -24,7 +24,8 @@ class Rdv extends Objet
             "t" => "DateField"
         ),        
         "duree" => array(
-            "i" => 5
+            "i" => 5,
+            "t" => "DureeField"
         ));
 
 
