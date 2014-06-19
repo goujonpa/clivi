@@ -16,8 +16,8 @@ class DateField extends Field
         $ret = true;
         $this->value = $_POST[$this->name];
         $year = substr($this->value, 0, 4);
-        $month = substr($this->value, 6, 2);
-        $day = substr($this->value, 9, 2);
+        $month = substr($this->value, 5, 2);
+        $day = substr($this->value, 8, 2);
         $today = getdate();
         if ($year < $today[year]) {
             $ret = false;
@@ -31,8 +31,8 @@ class DateField extends Field
 
     public function show() {
         $year = substr($this->value, 0, 4);
-        $month = substr($this->value, 6, 2);
-        $day = substr($this->value, 9, 2);
+        $month = substr($this->value, 5, 2);
+        $day = substr($this->value, 8, 2);
         $html = $day.'-'.$month.'-'.$year;
         return $html; 
     }
