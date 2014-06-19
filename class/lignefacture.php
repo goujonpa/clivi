@@ -15,7 +15,7 @@ class LigneFacture extends Objet
             "i" => 8
         ),
         "produit" => array(
-            "t" => "ForeignField"
+            "t" => "ForeignField",
             "i" => 10
         ),
         "prestation" => array(
