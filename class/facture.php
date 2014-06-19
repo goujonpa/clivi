@@ -18,7 +18,7 @@ class Facture extends Objet
         ),
         "date_edition" => array(
             "label" => "Date d'édition",
-            "i" => 8,
+            "i" => 7,
             "t" => "DateField"
         ),
         "date_paiement" => array(
