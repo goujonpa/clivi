@@ -140,7 +140,7 @@
       <table class="table">
         <thead>
                 <th>Nom </th>
-                <th>Nombre d'individu' </th> 
+                <th>Nombre d'individu </th> 
         </thead>
           <tbody>
           <?php foreach ($stats->top10Race) as $ligne): ?>
