@@ -14,7 +14,7 @@ class DureeField extends Field
     public function validate()
     {
         $this->value = $_POST[$this->name];
-        if (this->value > -1) {
+        if ($this->value > -1) {
             return true;
         }
         return false;
@@ -23,8 +23,10 @@ class DureeField extends Field
     public function show() {
 
         $heures = (int)$this->value / 60;
+        $heure = intval($heures);
         $minutes = (int)$this->value % 60;
-        $html = $heures.'h '.$minutes.'min';
+        $minute = intval($minutes);
+        $html = $heure.'h '.$minute.'min';
         return $html; 
     }
 }

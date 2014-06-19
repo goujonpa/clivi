@@ -116,4 +116,40 @@
         </tbody>
       </table>
 
+      <br/>
+      <hr/>
+      <h4>Top 10 des espèces clientes</h4>
+      <table class="table">
+        <thead>
+                <th>Nom </th>
+                <th>Nombre d'individu </th> 
+        </thead>
+          <tbody>
+          <?php foreach ($stats->top10Espece() as $ligne): ?>
+            <tr>
+                <td><?php echo $ligne["nom"]; ?> </td>
+                <td><?php echo $ligne["count"]; ?> </td> 
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
+      <br/>
+      <hr/>
+      <h4>Top 10 des races clientes</h4>
+      <table class="table">
+        <thead>
+                <th>Nom </th>
+                <th>Nombre d'individu </th> 
+        </thead>
+          <tbody>
+          <?php foreach ($stats->top10Race() as $ligne): ?>
+            <tr>
+                <td><?php echo $ligne["nom"]; ?> </td>
+                <td><?php echo $ligne["count"]; ?> </td> 
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
 	</div>

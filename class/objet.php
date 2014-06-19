@@ -23,18 +23,22 @@ class Objet
         return $dbName;
     }
 
-    public static function getAll($id = null)
+    public static function getAll($arr = array())
     {
         $className = get_called_class();
         $dbName = self::dbName();
         $bdd = new Db();
         $result = Array();
-        if($id == null) {
+        if(count($arr) == 0) {
             $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName); // on prépare notre requête
             $requete_prepare->execute();
         } else {
-            $requete_prepare = $bdd->db->prepare("SELECT * FROM ".$dbName." WHERE id = :id");
-            $requete_prepare->execute(array("id" => $id));
+            $req = "SELECT * FROM ".$dbName." WHERE 1=1";
+            foreach($arr as $k => $a) {
+                $req .= " AND $k = :$k";
+            }
+            $requete_prepare = $bdd->db->prepare($req);
+            $requete_prepare->execute($arr);
         }
 
         while($ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC)) {
@@ -160,7 +164,7 @@ class Objet
         return self::dbName()." #".$this->{$this->_primaryAttr};
     }
 
-    public function getList($title, $id=null) {
-        return new ListView(get_called_class(), $title, $id);
+    public function getList($title, $arr=array()) {
+        return new ListView(get_called_class(), $title, $arr);
     }
 }
