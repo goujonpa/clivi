@@ -103,14 +103,14 @@
         <thead>
                 <th>Nom </th>
                 <th>Prenom </th> 
-                <th>Montant de la facture </th> 
+                <th>Nombre de rendez-vous </th> 
         </thead>
           <tbody>
           <?php foreach ($stats->top5Veterinaire() as $ligne): ?>
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
-                <td><?php echo $ligne["c"]; ?> </td> 
+                <td><?php echo $ligne["count"]; ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>
