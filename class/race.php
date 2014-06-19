@@ -18,7 +18,7 @@ class Race extends Objet
             "i" => 1
         ),
         "prix_intervention" => array(
-            "label" => "Prix de l'intervetion",
+            "label" => "Prix de l'intervention",
             "i" => 4,
             "t" => "PriceField"
         ));
