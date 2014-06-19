@@ -12,10 +12,10 @@ class Prestation extends Objet
         ),
         "type" => array(
             "i" => 2
-        )
+        ),
         "id" => array(
             "i" => 1
-        )
+        ),
         "prix" => array(
             "i" => 4,
             "t" => "PriceField"
