@@ -53,6 +53,8 @@ class ForeignField extends Field {
 	public function show() {
 		$classname = $this->name;
 		$item = new $classname;
+		if(!$this->value)
+			return "";
 		$item->select($this->value);
 		return $item->str();
 	}
