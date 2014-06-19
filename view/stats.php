@@ -8,19 +8,19 @@
       <table class="table">
         <thead>
                 <th>Nombre de client : </th>
-                <th><?php $tmp = $stats->nbClient(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbClient(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre d'employé' : </th>
-                <th><?php $tmp = $stats->nbEmploye(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbEmploye(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre de vétérinaire' : </th>
-                <th><?php $tmp = $stats->nbVeterinaire(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbVeterinaire(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre d'animaux : </th>
-                <th><?php $tmp = $stats->nbAnimaux(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbAnimaux(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre moyen d'animal par client : </th>
