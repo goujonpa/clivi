@@ -4,7 +4,7 @@
 */
 
 // Implemented actions
-$actions = array("listeFacture", "addFacture", "detailFacture", "addPresta", "addProduit", "addOrd");
+$actions = array("listeFacture", "addFacture", "editFacture", "detailFacture", "addPresta", "addProduit", "addOrd");
 
 // Check action is correct
 if(!in_array($action, $actions)) {
@@ -20,6 +20,12 @@ switch($action) {
 		$facture = new Facture();
 		$formConf = $facture->getForm();
 		include 'view/form.php';
+		break;
+	case "editFacture":
+		$facture = new Facture();
+        $facture->select($_GET['id']);
+        $formConf = $facture->getForm();
+        include 'view/form.php';
 		break;
 	case "addPresta":
 		$ligne = new LigneFacturePrestation();

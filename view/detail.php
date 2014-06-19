@@ -17,6 +17,7 @@
                         <td><?php echo $field->show(); ?></td>
                     <?php endforeach; ?>
                     <td><a href="<?php echo $base_url.$page.'/detail'.$list->class.'?'.$line->_primaryAttr.'='.$line->{$line->_primaryAttr}() ?>" type="button" class="btn btn-warning">Detail</a></td>
+                    <td><a href="<?php echo $base_url.$page.'/edit'.$list->class.'?'.$line->_primaryAttr.'='.$line->{$line->_primaryAttr}() ?>" type="button" class="btn btn-warning">Editer</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

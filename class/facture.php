@@ -28,11 +28,11 @@ class Facture extends Objet
         ),
         "moyen_paiement" => array(
             "label" => "Moyen de paiement",
-            "i" => -1
+            "i" => 9
         ),
         "prix_total" => array(
             "label" => "Prix total",
-            "i" => 9,
+            "i" => 10,
             "t" => "PriceField"
         ));
 
