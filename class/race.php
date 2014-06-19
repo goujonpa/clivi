@@ -12,7 +12,6 @@ class Race extends Objet
             "i" => 3
         ),
         "nom" => array(
-            "t" => "ForeignField",
             "i" => 2
         ),
         "id" => array(
@@ -65,6 +64,7 @@ class Race extends Objet
     }
 
     public function str() {
-        return $this->nom;
+        $tostr = $this->nom.' '.$this->espece;
+        return $tostr;
     }
 }
