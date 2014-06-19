@@ -15,6 +15,72 @@ class Stats
         return $ligne;
     }
 
+    public function nbClient()
+    {
+        $bdd = new Db();
+
+        $requete_prepare = $bdd->db->prepare("  SELECT COUNT(*) AS nb
+                                                FROM client" ); // on prépare notre requête
+        $requete_prepare->execute();
+
+        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+
+        return $ligne;
+    }
+
+    public function nbAnimaux()
+    {
+        $bdd = new Db();
+
+        $requete_prepare = $bdd->db->prepare("  SELECT COUNT(*) AS nb
+                                                FROM animaux" ); // on prépare notre requête
+        $requete_prepare->execute();
+
+        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+
+        return $ligne;
+    }
+
+    public function totalCA()
+    {
+        $bdd = new Db();
+
+        $requete_prepare = $bdd->db->prepare("  SELECT SUM(prix_total) AS ca
+                                                FROM facture" ); // on prépare notre requête
+        $requete_prepare->execute();
+
+        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+
+        return $ligne;
+    }
+
+    public function nbEmploye()
+    {
+        $bdd = new Db();
+
+        $requete_prepare = $bdd->db->prepare("  SELECT COUNT(*) AS nb
+                                                FROM employe" ); // on prépare notre requête
+        $requete_prepare->execute();
+
+        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+
+        return $ligne;
+    }
+
+    public function nbVeterinaire()
+    {
+        $bdd = new Db();
+
+        $requete_prepare = $bdd->db->prepare("  SELECT COUNT(*) AS nb
+                                                FROM employe e
+                                                WHERE e.is_veterinaire = '1'" ); // on prépare notre requête
+        $requete_prepare->execute();
+
+        $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
+
+        return $ligne;
+    }
+
     public function nbAnimalMoyClient()
     {
         $bdd = new Db();
@@ -36,7 +102,7 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT c.nom, c.prenom, COUNT(a.client)
+        $requete_prepare = $bdd->db->prepare("  SELECT c.nom, c.prenom, COUNT(a.client) as count
                                                 FROM animal a, client c 
                                                 WHERE a.client = c.id
                                                 GROUP BY c.nom, c.prenom, c.id" ); // on prépare notre requête
