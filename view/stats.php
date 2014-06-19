@@ -8,7 +8,7 @@
       <table class="table">
         <thead>
                 <th>Nombre de client : </th>
-                <th><?php $tmp = $stats->nbClient(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbClient(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre d'employé' : </th>
