@@ -16,7 +16,8 @@ class Ordonnance extends Objet
             "t" => "DateField"
         ),
         "animal" => array(
-            "i" => 3
+            "i" => 3,
+            "t" => "ForeignField"
         ),
         "employe" => array(
             "i" => 4,
