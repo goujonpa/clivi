@@ -4,9 +4,12 @@ class LigneFacturePrestation extends LigneFacture
 {
 	public $_specialFields = array(
         "ordonnance" => array(
-            "it" => -1
+            "i" => -1
         ),
         "produit" => array(
+            "i" => -1
+        ),
+        "quantite" => array(
             "i" => -1
         ));
 
