@@ -152,7 +152,7 @@ class Stats
     {
         $bdd = new Db();
 
-        $requete_prepare = $bdd->db->prepare("  SELECT e.nom, e.prenom, COUNT(*) AS c 
+        $requete_prepare = $bdd->db->prepare("  SELECT e.nom, e.prenom, COUNT(*) AS count 
                                                 FROM employe e, rdv r 
                                                 WHERE e.id = r.employe
                                                 AND e.is_veterinaire = '1'
