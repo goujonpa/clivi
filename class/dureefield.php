@@ -23,8 +23,10 @@ class DureeField extends Field
     public function show() {
 
         $heures = (int)$this->value / 60;
+        $heure = intval($heures);
         $minutes = (int)$this->value % 60;
-        $html = $heures.'h '.$minutes.'min';
+        $minute = intval($minutes);
+        $html = $heure.'h '.$minute.'min';
         return $html; 
     }
 }
