@@ -21,6 +21,8 @@ class DateField extends Field
         } else {
             $this->value = null;
         }
+        print($this->name);
+        print($this->value);
 
         return true;
     }
