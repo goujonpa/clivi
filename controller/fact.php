@@ -24,19 +24,19 @@ switch($action) {
 	case "addPresta":
 		$ligne = new LigneFacturePrestation();
 		$ligne->setFacture($_GET['factId']);
-		$formConf = $facture->getForm();
+		$formConf = $ligne->getForm();
 		include 'view/form.php';
 		break;
 	case "addProduit":
 		$ligne = new LigneFactureProduit();
 		$ligne->setFacture($_GET['factId']);
-		$formConf = $facture->getForm();
+		$formConf = $ligne->getForm();
 		include 'view/form.php';
 		break;
 	case "addOrd":
 		$ligne = new LigneFactureOrdonnance();
 		$ligne->setFacture($_GET['factId']);
-		$formConf = $facture->getForm();
+		$formConf = $ligne->getForm();
 		include 'view/form.php';
 		break;
 	case "detailFacture":
