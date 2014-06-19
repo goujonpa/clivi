@@ -13,11 +13,27 @@ class DateField extends Field
 
     public function validate()
     {
+        $ret = true;
         $this->value = $_POST[$this->name];
-        return true;
+        $year = substr($this->value, 0, 4);
+        $month = substr($this->value, 6, 2);
+        $day = substr($this->value, 9, 2);
+        $today = getdate();
+        if ($year < $today[year]) {
+            $ret = false;
+        } else if ( $year == $today[year] && $month < $today[mon] ){
+            $ret = false;
+        } else if ( $year == $today[year] && $month == $today[mon] && $day < $today[day]){
+            $ret = false;
+        }
+        return ret;
     }
 
     public function show() {
-        return $this->value; 
+        $year = substr($this->value, 0, 4);
+        $month = substr($this->value, 6, 2);
+        $day = substr($this->value, 9, 2);
+        $html = $day.'-'.$month.'-'.$year;
+        return $html; 
     }
 }
