@@ -15,7 +15,7 @@ class DateField extends Field
     {
         if (isset($_POST[$this->name])) {
             $this->value = $_POST[$this->name];
-            if(count($this->value) < 4) {
+            if(strlen($this->value) < 4) {
                 $this->value = null;
             }
         } else {
