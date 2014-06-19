@@ -21,7 +21,8 @@ class Animal extends Objet
             "i" => 2
         ),
         "genre" => array(
-            "i" => 5
+            "i" => 5,
+            "t" => "GenderField"
         ),
         "poids" => array(
             "i" => 6
