@@ -46,6 +46,7 @@ class Animal extends Objet
             "i" => 3
         ),
         "race" => array(
+            "label" => "Espece : Race",
             "t" => "ForeignField",
             "i" => 4
         ));
