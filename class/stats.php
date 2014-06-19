@@ -157,7 +157,7 @@ class Stats
                                                 WHERE e.id = r.employe
                                                 AND e.is_veterinaire = '1'
                                                 GROUP BY e.nom, e.prenom, e.id
-                                                ORDER BY c DESC
+                                                ORDER BY count DESC
                                                 LIMIT 5" ); // on prépare notre requête
         $requete_prepare->execute();
 
