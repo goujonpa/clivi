@@ -76,4 +76,8 @@ class Ordonnance extends Objet
     {
         $this->prix = $prix;
     }
+
+    public function str() {
+        return $this->animal." ".$this->date;
+    }
 }

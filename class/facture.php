@@ -105,4 +105,8 @@ class Facture extends Objet
     {
         $this->prix_total = $prix_total;
     }
+
+    public function str() {
+        return $this->animal." ".$this->date_edition." ".$this->prix_total;
+    }
 }
