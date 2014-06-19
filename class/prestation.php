@@ -11,7 +11,8 @@ class Prestation extends Objet
             "i" => 3
         ),
         "type" => array(
-            "i" => 2
+            "i" => 2,
+            "t" => "TypeField"
         ),
         "id" => array(
             "i" => 1
