@@ -78,6 +78,8 @@ class Ordonnance extends Objet
     }
 
     public function str() {
-        return $this->animal." ".$this->date;
+        $animal = new Animal()
+        $fields = $animal->select($this->id)
+        return $fields["nom"]." ".$this->date;
     }
 }
