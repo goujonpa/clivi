@@ -15,9 +15,13 @@ class DateField extends Field
     {
         if (isset($_POST[$this->name])) {
             $this->value = $_POST[$this->name];
+            if($this->value == " ") {
+                $this->value = null;
+            }
         } else {
-            $this->value = NULL;
+            $this->value = null;
         }
+        print_r($_POST);
 
         return true;
     }

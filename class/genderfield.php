@@ -6,9 +6,9 @@ class GenderField extends Field
         // Todo, if isset($_POST[$this->name]) && !$this->validate() => Show a error msg explanation for this line.
         $html = '<div class="form-group">
                     <label for="form'.$this->name.'">'.$this->label.'</label>
-                    <select class="form-control" name="'.$this->name.'">';'
-                        <option value="M" selected>Male</option>
-                        <option value="F">Femelle</option>
+                    <select class="form-control" name="'.$this->name.'">
+                        <option value="M" '.($this->value == "M" ? "selected" : "").'>Male</option>
+                        <option value="F" '.($this->value == "F" ? "selected" : "").'>Femelle</option>
                     </select>
                 </div>';
         return $html;

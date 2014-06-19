@@ -38,7 +38,9 @@ class Field {
 			return true;
 		}
 
-		$this->value = $_POST[$this->name];
+		if(isset($_POST[$this->name])) {
+			$this->value = $_POST[$this->name];
+		}
 		return true;
 	}
 
