@@ -16,7 +16,7 @@
             <?php foreach($list->getLabels() as $field): ?>
                 <th><?php echo $field->label; ?></th>
             <?php endforeach; ?>
-                <th></th>
+                <?php if(!isset($disabledTools)) { ?> <th></th> <?php } ?>
         </thead>
         <tbody>
             <?php foreach($list->getLines() as $line): ?>
@@ -24,7 +24,7 @@
                     <?php foreach($line->getFields() as $field): ?>
                         <td><?php echo $field->show(); ?></td>
                     <?php endforeach; ?>
-                    <td><a href="<?php echo $base_url.$page.'/edit'.$list->class.'?'.$line->_primaryAttr.'='.$line->{$line->_primaryAttr}() ?>" type="button" class="btn btn-warning">Editer</a></td>
+                    <?php if(!isset($disabledTools)) { ?> <td><a href="<?php echo $base_url.$page.'/edit'.$list->class.'?'.$line->_primaryAttr.'='.$line->{$line->_primaryAttr}() ?>" type="button" class="btn btn-warning">Editer</a></td><?php } ?>
                 </tr>
             <?php endforeach; ?>
         </tbody>

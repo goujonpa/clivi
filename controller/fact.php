@@ -48,6 +48,7 @@ switch($action) {
 		echo ' <a href="'.$base_url.$page.'/addOrd'.'?factId='.$_GET["id"].'" type="button" class="btn btn-success">Ajouter une Ordonnance</a>';
         echo '</div>';
         $list = LigneFacture::getList("Détails de la facture", array("facture" => $_GET["id"]));
+        $disabledTools = true;
         include 'view/list.php';
 		break;
 	default:
