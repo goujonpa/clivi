@@ -105,7 +105,8 @@ class Stats
         $requete_prepare = $bdd->db->prepare("  SELECT c.nom, c.prenom, COUNT(a.client) as count
                                                 FROM animal a, client c 
                                                 WHERE a.client = c.id
-                                                GROUP BY c.nom, c.prenom, c.id" ); // on prépare notre requête
+                                                GROUP BY c.nom, c.prenom, c.id
+                                                ORDER BY count DESC" ); // on prépare notre requête
         $requete_prepare->execute();
 
         $ligne = $requete_prepare->fetchAll(PDO::FETCH_ASSOC);
