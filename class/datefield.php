@@ -13,20 +13,8 @@ class DateField extends Field
 
     public function validate()
     {
-        $ret = true;
         $this->value = $_POST[$this->name];
-        $year = substr($this->value, 0, 4);
-        $month = substr($this->value, 5, 2);
-        $day = substr($this->value, 8, 2);
-        $today = getdate();
-        if ($year < $today[year]) {
-            $ret = false;
-        } else if ( $year == $today[year] && $month < $today[mon] ){
-            $ret = false;
-        } else if ( $year == $today[year] && $month == $today[mon] && $day < $today[day]){
-            $ret = false;
-        }
-        return ret;
+        return true;
     }
 
     public function show() {
