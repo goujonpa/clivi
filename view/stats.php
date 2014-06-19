@@ -70,7 +70,7 @@
             <tr>
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
-                <td><?php echo $ligne["prix_total"]; ?> </td> 
+                <td><?php echo number_format($ligne["prix_total"], 2, ',', ' '); ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>
