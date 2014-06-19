@@ -9,6 +9,29 @@ class LigneFacture extends Objet
     protected $produit;
     protected $quantite;
     protected $remise;
+    public $_specialFields = array(
+        "ordonnance" => array(
+            "t" => "ForeignField",
+            "i" => 8
+        ),
+        "produit" => array(
+            "t" => "ForeignField"
+            "i" => 10
+        ),
+        "prestation" => array(
+            "t" => "ForeignField",
+            "i" => 9
+        ),
+        "quantite" => array(
+            "i" => 11
+        ),
+        "facture" => array(
+            "t" => "ForeignField",
+            "i" => 6
+        ),
+        "remise" => array(
+            "i" => 7
+        ));
 
     public static function dbName() {
         return "lignefacture";
