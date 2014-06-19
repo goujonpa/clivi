@@ -14,7 +14,7 @@ class DureeField extends Field
     public function validate()
     {
         $this->value = $_POST[$this->name];
-        if (this->value > -1) {
+        if ($this->value > -1) {
             return true;
         }
         return false;
