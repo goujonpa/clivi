@@ -18,6 +18,10 @@ class DateField extends Field
     }
 
     public function show() {
-        return $this->value; 
+        $year = substr($this->value, 0, 4);
+        $month = substr($this->value, 5, 2);
+        $day = substr($this->value, 8, 2);
+        $html = $day.'-'.$month.'-'.$year;
+        return $html; 
     }
 }

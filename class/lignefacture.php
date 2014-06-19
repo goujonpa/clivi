@@ -10,6 +10,10 @@ class LigneFacture extends Objet
     protected $quantite;
     protected $remise;
 
+    public static function dbName() {
+        return "lignefacture";
+    }
+
     public function id()
     {
         return $this->id;

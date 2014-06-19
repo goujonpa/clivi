@@ -83,7 +83,8 @@ class Objet
 
     public function insert()
     {
-        $dbName = self::dbName();
+        $class = get_called_class();
+        $dbName = $class::dbName();
         $bdd = new Db();
 
         $values = array();

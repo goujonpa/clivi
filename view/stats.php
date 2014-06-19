@@ -7,20 +7,20 @@
         <h4>Statistiques générales : </h4>
       <table class="table">
         <thead>
-                <th>Nombre de client : </th>
+                <th>Nombre de clients : </th>
                 <th><?php $tmp = $stats->nbClient(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
-                <th>Nombre d'employé' : </th>
-                <th><?php $tmp = $stats->nbEmploye(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th>Nombre d'employés : </th>
+                <th><?php $tmp = $stats->nbEmploye(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
-                <th>Nombre de vétérinaire' : </th>
-                <th><?php $tmp = $stats->nbVeterinaire(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th>Nombre de vétérinaires : </th>
+                <th><?php $tmp = $stats->nbVeterinaire(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre d'animaux : </th>
-                <th><?php $tmp = $stats->nbAnimaux(); $nb_formated = number_format($tmp["nb"], 2, ',', ' '); echo $nb_formated; ?></th>
+                <th><?php $tmp = $stats->nbAnimaux(); $nb_formated = number_format($tmp["nb"]); echo $nb_formated; ?></th>
         </thead>
         <thead>
                 <th>Nombre moyen d'animal par client : </th>
@@ -91,6 +91,26 @@
                 <td><?php echo $ligne["nom"]; ?> </td>
                 <td><?php echo $ligne["prenom"]; ?> </td>
                 <td><?php echo $ligne["count"]; ?> </td> 
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
+      <br/>
+      <hr/>
+      <h4>Top 5 des vétérinaires</h4>
+      <table class="table">
+        <thead>
+                <th>Nom </th>
+                <th>Prenom </th> 
+                <th>Montant de la facture </th> 
+        </thead>
+          <tbody>
+          <?php foreach ($stats->top5Veterinaire() as $ligne): ?>
+            <tr>
+                <td><?php echo $ligne["nom"]; ?> </td>
+                <td><?php echo $ligne["prenom"]; ?> </td>
+                <td><?php echo $ligne["c"]; ?> </td> 
             </tr>
           <?php endforeach; ?>
         </tbody>

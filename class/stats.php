@@ -33,7 +33,7 @@ class Stats
         $bdd = new Db();
 
         $requete_prepare = $bdd->db->prepare("  SELECT COUNT(*) AS nb
-                                                FROM animaux" ); // on prépare notre requête
+                                                FROM animal" ); // on prépare notre requête
         $requete_prepare->execute();
 
         $ligne = $requete_prepare->fetch(PDO::FETCH_ASSOC);
